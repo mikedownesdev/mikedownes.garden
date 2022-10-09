@@ -1,6 +1,10 @@
 # Generated website directory
 _site/
 
+# Don't push .md source files
+_notes/
+_oldnotes/
+
 # Sass cache
 .sass-cache/
 

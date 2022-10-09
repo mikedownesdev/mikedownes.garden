@@ -1,6 +1,17 @@
-title:               My digital garden
+title:               garden.mikedownes.dev
 include:             ['_pages']
-exclude:             ['_includes/notes_graph.json']
+exclude:             [
+  '_includes/notes_graph.json', 
+  # '_cloud-vault-symlink/*.pdf',
+  # '_cloud-vault-symlink/**/*.pdf', 
+  # '_cloud-vault-symlink/*.png',
+  # '_cloud-vault-symlink/**/*.png'
+  '_notes/*.pdf',
+  '_notes/**/*.pdf', 
+  '_notes/*.png',
+  '_notes/**/*.png',
+  '_notes/.obsidian/*'
+]
 # You may need to change the base URL depending on your deploy configuration.
 # Specifically, when using GitHub Pages, the baseurl should point to where GitHub
 # Pages deploys your repository (which is usually the repository name).
@@ -33,6 +44,9 @@ collections:
   notes:
     output: true
     permalink: /:slug
+  # cloud-vault-symlink:
+  #   output: true
+  #   permalink: /:slug
 
 defaults:
   - scope:
@@ -43,3 +57,15 @@ defaults:
       path: "_notes/**/*.md"
     values:
       layout: "note"
+      published: false
+  # - scope:
+  #     path: "_cloud-vault-symlink/*.md"
+  #   values:
+  #     layout: "note"
+  #     published: false
+  # - scope:
+  #     path: "_cloud-vault-symlink/**/*.md"
+  #   values:
+  #     layout: "note"
+  #     published: false
+
