@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+
+  <link rel="canonical" href="/digital-garden-dev-setup" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="  [!warning] Nerd Stuff 🧑‍🔬***">
+
+  <meta property="og:site_name" content="garden.mikedownes.dev">
+
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgo=">
+
+  <link rel="stylesheet" href="/styles.css">
+
+  
+  <meta property="og:description" content="  [!warning] Nerd Stuff 🧑‍🔬***"/>
+  
+
+  
+  <meta property="og:title" content="Digital garden dev setup">
+  <meta property="og:type" content="article">
+  
+
+  
+  <meta property="article:published_time" content="2022-10-09T19:24:04-04:00">
+  <meta property="article:author" content="/">
+  
+
+  <meta property="og:url" content="/digital-garden-dev-setup" />
+
+  
+
+  <title>
+    
+      Digital garden dev setup &mdash; garden.mikedownes.dev
+    
+  </title>
+</head>
+
+  <body>
+    <nav><div>
+    <a class="internal-link" href="/"><b>garden.mikedownes.dev</b></a>
+</div>
+</nav>
+    <div class="wrapper">
+      <main><article>
+  <div>
+    <h1>Digital garden dev setup</h1>
+    <time datetime="2022-10-09T19:08:02-04:00">
+      Last updated on October 9, 2022
+      
+    </time>
+  </div>
+
+  <div id="notes-entry-container">
+    <content>
+      <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<blockquote>
+  <p>[!warning] Nerd Stuff 🧑‍🔬
+***</p>
+</blockquote>
+
+<h2 id="scratch">Scratch</h2>
+<ul>
+  <li>Use <a href="https://github.com/maximevaillancourt/digital-garden-jekyll-template" target="_blank">Max’s Jekyll theme</a> to deploy notes
+    <blockquote>
+      <p>[!warning]</p>
+      <ul>
+        <li>This jekyll theme uses a <strong>custom plugin</strong> which GitHub Pages does not support</li>
+        <li>No Search</li>
+      </ul>
+    </blockquote>
+  </li>
+  <li>
+    <p>Can I add a flower shop?</p>
+  </li>
+  <li>
+    <p>Apparently this <a href="https://github.com/jeffreytse/jekyll-deploy-action" target="_blank">GitHub action</a> might be able to circumvent the Github Pages problem</p>
+  </li>
+  <li>Your GitHub Pages, especi</li>
+</ul>
+
+<hr>
+
+<h2 id="log">Log</h2>
+
+<blockquote>
+  <p>[!tldr] Summary
+<span title="There is no note that matches this link." class="invalid-link">  <span class="invalid-link-brackets">[[</span>  Vaillancourt, Maxime|Maxime Vaillancourt  <span class="invalid-link-brackets">]]</span></span> wrote a tutorial for setting up a <span title="There is no note that matches this link." class="invalid-link">  <span class="invalid-link-brackets">[[</span>  Jekyll  <span class="invalid-link-brackets">]]</span></span> project with their template: <a class="internal-link" href="/max-vaillancourt-s-jekyll-template-tutorial">Max Vaillancourt’s Jekyll Template Tutorial</a>. 
+This is my journey following along with the tutorial.</p>
+</blockquote>
+
+<h3 id="part-1---struggle-with-ruby">Part 1 - Struggle with Ruby</h3>
+<p>Let’s begin! Step 0:
+!<span title="There is no note that matches this link." class="invalid-link">  <span class="invalid-link-brackets">[[</span>  Max Vaillancourt’s Jekyll Template Tutorial#0 Set up prerequisites  <span class="invalid-link-brackets">]]</span></span></p>
+<ul>
+  <li>This led me down a frustrating path of installing <span title="There is no note that matches this link." class="invalid-link">  <span class="invalid-link-brackets">[[</span>  Ruby  <span class="invalid-link-brackets">]]</span></span>, which apparently comes installed on MacOS by default, but you can’t really use that version to develop without a bunch of <code class="language-plaintext highlighter-rouge">sudo</code> commands that you probably should avoid.</li>
+  <li>Tried to install Ruby with <code class="language-plaintext highlighter-rouge">rbenv</code>, and had no fun at all…</li>
+  <li>Double-backed, successfully installed <span title="There is no note that matches this link." class="invalid-link">  <span class="invalid-link-brackets">[[</span>  Ruby enVironment Manager|RVM  <span class="invalid-link-brackets">]]</span></span> instead!
+    <ul>
+      <li>This finally made me able let me switch <code class="language-plaintext highlighter-rouge">which ruby</code> to output:
+        <div class="language-bash highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c">#which ruby</span>
+/Users/michael/.rvm/rubies/ruby-3.0.0/bin/ruby
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>Ok so now my version of Ruby is the correct one… 😄</li>
+</ul>
+
+<h3 id="part-2---local-development">Part 2 - Local Development</h3>
+<p><span title="There is no note that matches this link." class="invalid-link">  <span class="invalid-link-brackets">[[</span>  Max Vaillancourt’s Jekyll Template Tutorial#1 Create a fork of the template repository|Step 1  <span class="invalid-link-brackets">]]</span></span> and <span title="There is no note that matches this link." class="invalid-link">  <span class="invalid-link-brackets">[[</span>  Max Vaillancourt’s Jekyll Template Tutorial#2 Clone your repository locally|Step 2  <span class="invalid-link-brackets">]]</span></span> had no problems!</p>
+
+<p>And then…</p>
+
+<p>!<span title="There is no note that matches this link." class="invalid-link">  <span class="invalid-link-brackets">[[</span>  Max Vaillancourt’s Jekyll Template Tutorial#3 Test out the site locally  <span class="invalid-link-brackets">]]</span></span></p>
+
+<p>But when <strong><em>I</em></strong> tried to <code class="language-plaintext highlighter-rouge">bundle</code> in my new project directory, I received an errored output. See ➡️  to direct your attention</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Fetching gem metadata from https://rubygems.org/.........
+Using public_suffix 4.0.6
+Using bundler 2.2.3
+Using colorator 1.1.0
+Using concurrent-ruby 1.1.7
+➡️ Fetching eventmachine 1.2.7           // ISSUES INSTALLING HERE
+Using http_parser.rb 0.6.0
+Using ffi 1.14.2
+Using forwardable-extended 2.6.0
+Using rb-fsevent 0.10.4
+Using rexml 3.2.5
+Using liquid 4.0.3
+Using mercenary 0.4.0
+Using rouge 3.26.0
+Using safe_yaml 1.0.5
+Using unicode-display_width 1.7.0
+Using posix-spawn 0.3.15
+Using mini_portile2 2.8.0
+Using racc 1.6.0
+Using webrick 1.7.0
+Using addressable 2.8.0
+Using i18n 1.8.5
+Using sassc 2.4.0
+Using rb-inotify 0.10.1
+Using kramdown 2.3.1
+Using pathutil 0.16.2
+Using terminal-table 2.0.0
+Using nokogiri 1.13.6 <span class="o">(</span>arm64-darwin<span class="o">)</span>
+Using jekyll-sass-converter 2.1.0
+Using listen 3.3.3
+Using kramdown-parser-gfm 1.1.0
+Using jekyll-watch 2.2.1
+➡️ Installing eventmachine 1.2.7 with native extensions // ISSUES INSTALLING HERE
+➡️ Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+
+
+...blah blah blah
+
+current directory: /Users/michael/.rvm/gems/ruby-3.0.0/gems/eventmachine-1.2.7/ext
+make <span class="s2">"DESTDIR="</span>
+
+compiling binder.cpp
+In file included from binder.cpp:20:
+
+➡️  ./project.h:119:10: fatal error: <span class="s1">'openssl/ssl.h'</span> file not found
+➡️  <span class="c">#include &lt;openssl/ssl.h&gt;</span>
+➡️           ^~~~~~~~~~~~~~~
+  
+➡️ An error occurred <span class="k">while </span>installing eventmachine <span class="o">(</span>1.2.7<span class="o">)</span>, and Bundler cannot <span class="k">continue</span><span class="nb">.</span>
+
+➡️ Make sure that <span class="sb">`</span>gem <span class="nb">install </span>eventmachine <span class="nt">-v</span> <span class="s1">'1.2.7'</span> <span class="nt">--source</span> <span class="s1">'https://rubygems.org/'</span><span class="sb">`</span> succeeds before bundling.
+
+  
+
+In Gemfile:
+  jekyll-last-modified-at was resolved to 1.3.0, which depends on
+    jekyll was resolved to 4.2.0, which depends on
+      em-websocket was resolved to 0.5.2, which depends on
+        eventmachine
+</code></pre></div></div>
+
+<ul>
+  <li>Ok so we know there is an error installing the <code class="language-plaintext highlighter-rouge">eventmachine 1.2.7</code> package, and it might have something to do with SSL.</li>
+  <li>It says try <code class="language-plaintext highlighter-rouge">gem install eventmachine -v '1.2.7' --source 'https://rubygems.org/'</code>
+    <ul>
+      <li>No luck, similar (if not exact same) issue</li>
+    </ul>
+  </li>
+  <li><em>~scours the internet~</em></li>
+  <li>GitHub user, <a href="https://github.com/ITJamie" target="_blank">ITJamie</a>, with this <a href="https://github.com/eventmachine/eventmachine/issues/932#issuecomment-864392814" target="_blank">amazing comment on a GitHub Issue</a>
+</li>
+</ul>
+
+<blockquote>
+  <p>[!quote]
+if on an m1 mac use <code class="language-plaintext highlighter-rouge">-- --with-openssl-dir=/opt/homebrew/opt/openssl@1.1</code> instead</p>
+</blockquote>
+
+<p>And so I do:</p>
+<blockquote>
+  <p>[!tip] Boom.</p>
+  <div class="language-bash highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>gem <span class="nb">install </span>eventmachine <span class="nt">--</span> <span class="nt">--with-openssl-dir</span><span class="o">=</span>/opt/homebrew/opt/openssl@1.1  <span class="nt">-v</span> <span class="s1">'1.2.7'</span> <span class="nt">--source</span> <span class="s1">'https://rubygems.org/'</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<p>Success! 😄  <code class="language-plaintext highlighter-rouge">bundle</code> works successfully and so does <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code></p>
+
+<h3 id="part-3---hosting">Part 3 - Hosting</h3>
+<ul>
+  <li>Kinda skipping over this a bit…
+    <ul>
+      <li>Connect GitHub to Netlify</li>
+      <li>Connect Google Domains to Netlify
+        <ul>
+          <li>https://www.youtube.com/watch?v=cDDr-NoI5fo</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>The DNS stuff is a bit weird</li>
+</ul>
+
+<h3 id="part-4---my-own-invention">Part 4 - My own invention</h3>
+<p>Given that I’ve already configured my personal notes in such a way that may not been incompatible with this system. I need to solve two things.</p>
+
+<h5 id="1-can-i-have-my-notes-folder-live-in-a-different-location">1. <strong>Can I have my notes folder live in a different location?</strong>
+</h5>
+<p>The Jekyll template requests that you place your notes to be published in a folder named <code class="language-plaintext highlighter-rouge">_notes</code>. I learned later that this is known as a <a href="https://jekyllrb.com/docs/collections/" target="_blank">collection</a>.  But I already have a notes folder (path) that I like to keep which enables me to access my notes from multiple devices.</p>
+
+<p>Enter <a class="internal-link" href="/symlinks">symlinks</a> → With the following (templated) I was able to create a symlink inside of the project folder, and then rename it to <code class="language-plaintext highlighter-rouge">_notes</code>. In other words, the content in the <code class="language-plaintext highlighter-rouge">_notes</code> folder are actually located in a different location:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># do this, then rename the short cut to _notes</span>
+<span class="nb">ln</span> <span class="nt">-s</span>  
+</code></pre></div></div>
+
+<h5 id="2-can-i-selectively-publish-notes">2 <strong>Can I selectively publish notes?</strong>
+</h5>
+<p>Since I use my notes for everything in my life, there’s likely some content I don’t want to share. Simple to-do lists, personally identifiable information (PII), etc.</p>
+
+<p>Turns out the <span title="There is no note that matches this link." class="invalid-link">  <span class="invalid-link-brackets">[[</span>  YAML front matter  <span class="invalid-link-brackets">]]</span></span> on each note, plus the <code class="language-plaintext highlighter-rouge">config.yaml</code> file gives us all of the power we need to set rules about what gets published, and therefore, built for the site. I needed to make <strong>two</strong> edits to the config file to ensure the best experience:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">exclude</span><span class="pi">:</span> <span class="pi">[</span>
+<span class="s1">'</span><span class="s">_includes/notes_graph.json'</span><span class="pi">,</span>
+<span class="s1">'</span><span class="s">_notes/*.pdf'</span><span class="pi">,</span>
+<span class="s1">'</span><span class="s">_notes/**/*.pdf'</span><span class="pi">,</span>
+<span class="s1">'</span><span class="s">_notes/*.png'</span><span class="pi">,</span>
+<span class="s1">'</span><span class="s">_notes/**/*.png'</span><span class="pi">,</span>
+<span class="s1">'</span><span class="s">_notes/.obsidian/*'</span>
+<span class="pi">]</span>
+
+<span class="na">defaults</span><span class="pi">:</span>
+<span class="err">	</span><span class="pi">-</span> <span class="s">scope</span>
+<span class="err">		</span><span class="na">path</span><span class="pi">:</span> <span class="s2">"</span><span class="s">_notes/**/*.md"</span>
+<span class="err">	</span><span class="na">values</span><span class="pi">:</span>
+<span class="err">		</span><span class="na">layout</span><span class="pi">:</span> <span class="s2">"</span><span class="s">note"</span>
+<span class="err">		</span><span class="na">published</span><span class="pi">:</span> <span class="no">false</span>
+</code></pre></div></div>
+<ul>
+  <li>For the <code class="language-plaintext highlighter-rouge">exclude</code> variable, I don’t want to build any files that aren’t <code class="language-plaintext highlighter-rouge">.md</code>… for now. Not sure how this will work for notes with embedded images. More on this later?</li>
+  <li>I added a <code class="language-plaintext highlighter-rouge">published: false</code> to ensure that any notes that might be lacking front matter don’t get published.</li>
+</ul>
+
+<h3 id="part-5---trouble-in-paradise">Part 5 - Trouble in paradise</h3>
+
+<p>I realized that I would still need to commit my private notes to the git log, even if they were marked as <code class="language-plaintext highlighter-rouge">published: false</code> , which means they would be available if someone wanted to go looking through previous commits.</p>
+
+<p>So I need to</p>
+
+<h2 id="next-up">Next up</h2>
+<ul>
+  <li>Change hosted URL to garden.mikedownes.dev</li>
+  <li>Branching?</li>
+  <li>Embedded images?</li>
+  <li>Commit on Save?</li>
+  <li>CSS update
+    <ul>
+      <li>Some markdown blocks might not be rendering correctly</li>
+    </ul>
+  </li>
+  <li>Graph improvements?</li>
+  <li>Search?</li>
+</ul>
+</body></html>
+
+    </content>
+
+    <side style="font-size: 0.9em">
+      <h3 style="margin-bottom: 1em">Notes mentioning this note</h3>
+      
+      <div style="display: grid; grid-gap: 1em; grid-template-columns: repeat(1fr);">
+      
+        <div class="backlink-box">
+        <a class="internal-link" href="/the-garden-gate">The garden gate</a><br>
+        <div style="font-size: 0.9em">Welcome 🌳
+</div>
+        </div>
+      
+      </div>
+      
+    </side>
+  </div>
+</article>
+
+<hr>
+
+<p>Here are all the notes in this garden, along with their links, visualized as a graph.</p>
+
+<style>
+  .links line {
+    stroke: #ccc;
+    opacity: 0.5;
+  }
+
+  .nodes circle {
+    cursor: pointer;
+    fill: #8b88e6;
+    transition: all 0.15s ease-out;
+  }
+
+  .text text {
+    cursor: pointer;
+    fill: #333;
+    text-shadow: -1px -1px 0 #fafafabb, 1px -1px 0 #fafafabb, -1px 1px 0 #fafafabb, 1px 1px 0 #fafafabb;
+  }
+
+  .nodes [active],
+  .text [active] {
+    cursor: pointer;
+    fill: black;
+  }
+
+  .inactive {
+    opacity: 0.1;
+    transition: all 0.15s ease-out;
+  }
+
+  #graph-wrapper {
+    background: #fcfcfc;
+    border-radius: 4px;
+    height: auto;
+  }
+</style>
+
+<div id="graph-wrapper">
+  <script>
+    var commentFlag = true;
+    
+    window.addEventListener("load", loadGraph);
+    window.addEventListener("scroll", loadGraph);
+
+    function loadGraph() {
+      if (!( document.getElementById("graph-wrapper").getBoundingClientRect().top <
+             window.innerHeight * 1.5 &&
+          commentFlag)){
+        return;
+      }
+      var oScript = document.createElement("script");
+      oScript.src = "https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js";
+      oScript.crossOrigin = 'anonymous';
+      oScript.integrity =
+        "sha512-FHsFVKQ/T1KWJDGSbrUhTJyS1ph3eRrxI228ND0EGaEp6v4a/vGwPWd3Dtd/+9cI7ccofZvl/wulICEurHN1pg==";
+      document.body.appendChild(oScript);
+      oScript.onload = () => {
+        const MINIMAL_NODE_SIZE = 8;
+        const MAX_NODE_SIZE = 12;
+        const ACTIVE_RADIUS_FACTOR = 1.5;
+        const STROKE = 1;
+        const FONT_SIZE = 16;
+        const TICKS = 200;
+        const FONT_BASELINE = 40;
+        const MAX_LABEL_LENGTH = 50;
+
+        const graphData = {"edges":[{"source":"68105103105116971083210397114100101110","target":"68105103105116971083210397114100101110"},{"source":"779712032118971051081089711099111117114116391153210610110712110810832116101109112108971161013211611711611111410597108","target":"68105103105116971083210397114100101110"},{"source":"681051031051169710832103971141001011103210010111832115101116117112","target":"68105103105116971083210397114100101110"},{"source":"8410410132103971141001011103210397116101","target":"68105103105116971083210397114100101110"},{"source":"681051031051169710832103971141001011103210010111832115101116117112","target":"779712032118971051081089711099111117114116391153210610110712110810832116101109112108971161013211611711611111410597108"},{"source":"68105103105116971083210397114100101110","target":"78111116105111110"},{"source":"781111161013211697107105110103329711499104101116121112101115","target":"78111116105111110"},{"source":"68105103105116971083210397114100101110","target":"799811510510010597110"},{"source":"779712032118971051081089711099111117114116391153210610110712110810832116101109112108971161013211611711611111410597108","target":"799811510510010597110"},{"source":"781111161013211697107105110103329711499104101116121112101115","target":"799811510510010597110"},{"source":"799811510510010597110","target":"799811510510010597110"},{"source":"8211197109321141011151019711499104","target":"799811510510010597110"},{"source":"8410410132103971141001011103210397116101","target":"681051031051169710832103971141001011103210010111832115101116117112"},{"source":"68105103105116971083210397114100101110","target":"8211197109321141011151019711499104"},{"source":"799811510510010597110","target":"8211197109321141011151019711499104"},{"source":"681051031051169710832103971141001011103210010111832115101116117112","target":"83121109108105110107115"}],"nodes":[{"id":"68105103105116971083210397114100101110","path":"/digital-garden","label":"Digital garden"},{"id":"719711611598121","path":"/gatsby","label":"Gatsby"},{"id":"779712032118971051081089711099111117114116391153210610110712110810832116101109112108971161013211611711611111410597108","path":"/max-vaillancourt-s-jekyll-template-tutorial","label":"Max vaillancourt's jekyll template tutorial"},{"id":"781111161013211697107105110103329711499104101116121112101115","path":"/note-taking-archetypes","label":"Note taking archetypes"},{"id":"78111116105111110","path":"/notion","label":"Notion"},{"id":"799811510510010597110","path":"/obsidian","label":"Obsidian"},{"id":"681051031051169710832103971141001011103210010111832115101116117112","path":"/digital-garden-dev-setup","label":"Digital garden dev setup"},{"id":"8211197109321141011151019711499104","path":"/roam-research","label":"Roam research"},{"id":"8410410132103971141001011103210397116101","path":"/the-garden-gate","label":"The garden gate"},{"id":"83121109108105110107115","path":"/symlinks","label":"Symlinks"}]}
+        let nodesData = graphData.nodes;
+        let linksData = graphData.edges;
+
+        const nodeSize = {};
+
+        const updateNodeSize = () => {
+          nodesData.forEach((el) => {
+            let weight =
+              3 *
+              Math.sqrt(
+                linksData.filter((l) => l.source.id === el.id || l.target.id === el.id)
+                  .length + 1
+              );
+            if (weight < MINIMAL_NODE_SIZE) {
+              weight = MINIMAL_NODE_SIZE;
+            } else if (weight > MAX_NODE_SIZE) {
+              weight = MAX_NODE_SIZE;
+            }
+            nodeSize[el.id] = weight;
+          });
+        };
+
+        const onClick = (d) => {
+          window.location = d.path
+        };
+
+        const onMouseover = function (d) {
+          const relatedNodesSet = new Set();
+          linksData
+            .filter((n) => n.target.id == d.id || n.source.id == d.id)
+            .forEach((n) => {
+              relatedNodesSet.add(n.target.id);
+              relatedNodesSet.add(n.source.id);
+            });
+
+          node.attr("class", (node_d) => {
+            if (node_d.id !== d.id && !relatedNodesSet.has(node_d.id)) {
+              return "inactive";
+            }
+            return "";
+          });
+
+          link.attr("class", (link_d) => {
+            if (link_d.source.id !== d.id && link_d.target.id !== d.id) {
+              return "inactive";
+            }
+            return "";
+          });
+
+          link.attr("stroke-width", (link_d) => {
+            if (link_d.source.id === d.id || link_d.target.id === d.id) {
+              return STROKE * 4;
+            }
+            return STROKE;
+          });
+          text.attr("class", (text_d) => {
+            if (text_d.id !== d.id && !relatedNodesSet.has(text_d.id)) {
+              return "inactive";
+            }
+            return "";
+          });
+        };
+
+        const onMouseout = function (d) {
+          node.attr("class", "");
+          link.attr("class", "");
+          text.attr("class", "");
+          link.attr("stroke-width", STROKE);
+        };
+
+        const sameNodes = (previous, next) => {
+          if (next.length !== previous.length) {
+            return false;
+          }
+
+          const map = new Map();
+          for (const node of previous) {
+            map.set(node.id, node.label);
+          }
+
+          for (const node of next) {
+            const found = map.get(node.id);
+            if (!found || found !== node.title) {
+              return false;
+            }
+          }
+
+          return true;
+        };
+
+        const sameEdges = (previous, next) => {
+          if (next.length !== previous.length) {
+            return false;
+          }
+
+          const set = new Set();
+          for (const edge of previous) {
+            set.add(`${edge.source.id}-${edge.target.id}`);
+          }
+
+          for (const edge of next) {
+            if (!set.has(`${edge.source.id}-${edge.target.id}`)) {
+              return false;
+            }
+          }
+
+          return true;
+        };
+
+        const graphWrapper = document.getElementById('graph-wrapper')
+        const element = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        element.setAttribute("width", graphWrapper.getBoundingClientRect().width);
+        element.setAttribute("height", window.innerHeight * 0.8);
+        graphWrapper.appendChild(element);
+
+        const reportWindowSize = () => {
+          element.setAttribute("width", window.innerWidth);
+          element.setAttribute("height", window.innerHeight);
+        };
+
+        window.onresize = reportWindowSize;
+
+        const svg = d3.select("svg");
+        const width = Number(svg.attr("width"));
+        const height = Number(svg.attr("height"));
+        let zoomLevel = 1;
+
+        const simulation = d3
+          .forceSimulation(nodesData)
+          .force("forceX", d3.forceX().x(width / 2))
+          .force("forceY", d3.forceY().y(height / 2))
+          .force("charge", d3.forceManyBody())
+          .force(
+            "link",
+            d3
+              .forceLink(linksData)
+              .id((d) => d.id)
+              .distance(70)
+          )
+          .force("center", d3.forceCenter(width / 2, height / 2))
+          .force("collision", d3.forceCollide().radius(80))
+          .stop();
+
+        const g = svg.append("g");
+        let link = g.append("g").attr("class", "links").selectAll(".link");
+        let node = g.append("g").attr("class", "nodes").selectAll(".node");
+        let text = g.append("g").attr("class", "text").selectAll(".text");
+
+        const resize = () => {
+          if (d3.event) {
+            const scale = d3.event.transform;
+            zoomLevel = scale.k;
+            g.attr("transform", scale);
+          }
+
+          const zoomOrKeep = (value) => (zoomLevel >= 1 ? value / zoomLevel : value);
+
+          const font = Math.max(Math.round(zoomOrKeep(FONT_SIZE)), 1);
+
+          text.attr("font-size", (d) => font);
+          text.attr("y", (d) => d.y - zoomOrKeep(FONT_BASELINE) + 8);
+          link.attr("stroke-width", zoomOrKeep(STROKE));
+          node.attr("r", (d) => {
+            return zoomOrKeep(nodeSize[d.id]);
+          });
+          svg
+            .selectAll("circle")
+            .filter((_d, i, nodes) => d3.select(nodes[i]).attr("active"))
+            .attr("r", (d) => zoomOrKeep(ACTIVE_RADIUS_FACTOR * nodeSize[d.id]));
+        };
+
+        const ticked = () => {
+          node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
+          text
+            .attr("x", (d) => d.x)
+            .attr("y", (d) => d.y - (FONT_BASELINE - nodeSize[d.id]) / zoomLevel);
+          link
+            .attr("x1", (d) => d.source.x)
+            .attr("y1", (d) => d.source.y)
+            .attr("x2", (d) => d.target.x)
+            .attr("y2", (d) => d.target.y);
+        };
+
+        const restart = () => {
+          updateNodeSize();
+          node = node.data(nodesData, (d) => d.id);
+          node.exit().remove();
+          node = node
+            .enter()
+            .append("circle")
+            .attr("r", (d) => {
+              return nodeSize[d.id];
+            })
+            .on("click", onClick)
+            .on("mouseover", onMouseover)
+            .on("mouseout", onMouseout)
+            .merge(node);
+
+          link = link.data(linksData, (d) => `${d.source.id}-${d.target.id}`);
+          link.exit().remove();
+          link = link.enter().append("line").attr("stroke-width", STROKE).merge(link);
+
+          text = text.data(nodesData, (d) => d.label);
+          text.exit().remove();
+          text = text
+            .enter()
+            .append("text")
+            .text((d) => shorten(d.label.replace(/_*/g, ""), MAX_LABEL_LENGTH))
+            .attr("font-size", `${FONT_SIZE}px`)
+            .attr("text-anchor", "middle")
+            .attr("alignment-baseline", "central")
+            .on("click", onClick)
+            .on("mouseover", onMouseover)
+            .on("mouseout", onMouseout)
+            .merge(text);
+
+          node.attr("active", (d) => isCurrentPath(d.path) ? true : null);
+          text.attr("active", (d) => isCurrentPath(d.path) ? true : null);
+
+          simulation.nodes(nodesData);
+          simulation.force("link").links(linksData);
+          simulation.alpha(1).restart();
+          simulation.stop();
+
+          for (let i = 0; i < TICKS; i++) {
+            simulation.tick();
+          }
+
+          ticked();
+        };
+
+        const zoomHandler = d3.zoom().scaleExtent([0.2, 3]).on("zoom", resize);
+
+        zoomHandler(svg);
+        restart();
+
+        function isCurrentPath(notePath) {
+          return window.location.pathname.includes(notePath)
+        }
+
+        function shorten(str, maxLen, separator = ' ') {
+          if (str.length <= maxLen) return str;
+          return str.substr(0, str.lastIndexOf(separator, maxLen)) + '...';
+        }
+        commentFlag = false;
+      }
+    }
+  </script>
+</div>
+
+</main>
+      <footer>This is the footer. Include anything you'd like here, like a link to an <a class="internal-link" href="/about">About</a> page.
+</footer>
+    </div>
+
+    <!-- That file is not particularly elegant. This will need a refactor at some point. -->
+<style>
+  content a.internal-link {
+    border-color: #8b88e6;
+    background-color: #efefff;
+  }
+
+  #tooltip-wrapper {
+    background: white;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    position: absolute;
+    width: 400px;
+    height: 250px;
+    font-size: 0.8em;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    opacity: 0;
+    transition: opacity 100ms;
+  }
+
+  #tooltip-wrapper:after {
+		content: "";
+		position: absolute;
+		z-index: 1;
+		bottom: 0;
+		left: 0;
+		pointer-events: none;
+		background-image: linear-gradient(to bottom, rgba(255,255,255, 0), rgba(255,255,255, 1) 90%);
+		width: 100%;
+		height: 75px;
+  }
+</style>
+
+<div style="opacity: 0; display: none;" id='tooltip-wrapper'>
+  <div id='tooltip-content'>
+  </div>
+</div>
+
+<iframe style="display: none; height: 0; width: 0;" id='link-preview-iframe' src="">
+</iframe>
+
+<script>
+  var opacityTimeout;
+  var contentTimeout;
+  var transitionDurationMs = 100;
+
+  var iframe = document.getElementById('link-preview-iframe')
+  var tooltipWrapper = document.getElementById('tooltip-wrapper')
+  var tooltipContent = document.getElementById('tooltip-content')
+
+  var linkHistories = {};
+
+  function hideTooltip() {
+    opacityTimeout = setTimeout(function() {
+      tooltipWrapper.style.opacity = 0;
+      contentTimeout = setTimeout(function() {
+        tooltipContent.innerHTML = '';
+        tooltipWrapper.style.display = 'none';
+      }, transitionDurationMs + 1);
+    }, transitionDurationMs)
+  }
+
+  function showTooltip(event) {
+    var elem = event.target;
+    var elem_props = elem.getClientRects()[elem.getClientRects().length - 1];
+    var top = window.pageYOffset || document.documentElement.scrollTop
+
+    if (event.target.host === window.location.host) {
+      if (!linkHistories[event.target.href]) {
+        iframe.src = event.target.href
+        iframe.onload = function() {
+          tooltipContentHtml = ''
+          tooltipContentHtml += '<div style="font-weight: bold;">' + iframe.contentWindow.document.querySelector('h1').innerHTML + '</div>'
+          tooltipContentHtml += iframe.contentWindow.document.querySelector('content').innerHTML
+
+          tooltipContent.innerHTML = tooltipContentHtml
+          linkHistories[event.target.href] = tooltipContentHtml
+
+          tooltipWrapper.style.display = 'block';
+          setTimeout(function() {
+            tooltipWrapper.style.opacity = 1;
+          }, 1)
+        } 
+      } else {
+        tooltipContent.innerHTML = linkHistories[event.target.href]
+        tooltipWrapper.style.display = 'block';
+        setTimeout(function() {
+          tooltipWrapper.style.opacity = 1;
+        }, 1)
+      }
+
+
+      tooltipWrapper.style.left = elem_props.left - (tooltipWrapper.offsetWidth / 2) + (elem_props.width / 2) + "px";
+      if ((window.innerHeight - elem_props.top) < (tooltipWrapper.offsetHeight)) {
+          tooltipWrapper.style.top = elem_props.top + top - tooltipWrapper.offsetHeight - 10 + "px";
+      } else if ((window.innerHeight - elem_props.top) > (tooltipWrapper.offsetHeight)) {
+          tooltipWrapper.style.top = elem_props.top + top + 35 + "px";
+      }
+
+      if ((elem_props.left + (elem_props.width / 2)) < (tooltipWrapper.offsetWidth / 2)) {
+          tooltipWrapper.style.left = "10px";
+      } else if ((document.body.clientWidth - elem_props.left - (elem_props.width / 2)) < (tooltipWrapper.offsetWidth / 2)) {
+          tooltipWrapper.style.left = document.body.clientWidth - tooltipWrapper.offsetWidth - 20 + "px";
+      }
+    }
+  }
+
+  function setupListeners(linkElement) {
+    linkElement.addEventListener('mouseleave', function(_event) {
+      hideTooltip();
+    });
+
+    tooltipWrapper.addEventListener('mouseleave', function(_event) {
+      hideTooltip();
+    });
+
+    linkElement.addEventListener('touchend', function(_event) {
+      hideTooltip();
+    });
+
+    tooltipWrapper.addEventListener('touchend', function(_event) {
+      hideTooltip();
+    });
+
+    linkElement.addEventListener('mouseenter', function(event) {
+      clearTimeout(opacityTimeout);
+      clearTimeout(contentTimeout);
+      showTooltip(event);
+    });
+
+    tooltipWrapper.addEventListener('mouseenter', function(event) {
+      clearTimeout(opacityTimeout);
+      clearTimeout(contentTimeout);
+    });
+  }
+
+  document.querySelectorAll('content a').forEach(setupListeners);
+</script>
+
+  </body>
+</html>

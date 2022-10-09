@@ -1,5 +1,5 @@
 # Generated website directory
-_site/
+# _site/
 
 # Don't push .md source files
 _notes/

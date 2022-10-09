@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+
+  <link rel="canonical" href="/max-vaillancourt-s-jekyll-template-tutorial" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="More Metadatasource: https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyllauthor: [[Vaillancourt, Maxime|Maxime Vaillancourt]]—S...">
+
+  <meta property="og:site_name" content="garden.mikedownes.dev">
+
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgo=">
+
+  <link rel="stylesheet" href="/styles.css">
+
+  
+  <meta property="og:description" content="More Metadatasource: https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyllauthor: [[Vaillancourt, Maxime|Maxime Vaillancourt]]—S..."/>
+  
+
+  
+  <meta property="og:title" content="Max vaillancourt's jekyll template tutorial">
+  <meta property="og:type" content="article">
+  
+
+  
+  <meta property="article:published_time" content="2022-10-09T19:24:04-04:00">
+  <meta property="article:author" content="/">
+  
+
+  <meta property="og:url" content="/max-vaillancourt-s-jekyll-template-tutorial" />
+
+  
+
+  <title>
+    
+      Max vaillancourt's jekyll template tutorial &mdash; garden.mikedownes.dev
+    
+  </title>
+</head>
+
+  <body>
+    <nav><div>
+    <a class="internal-link" href="/"><b>garden.mikedownes.dev</b></a>
+</div>
+</nav>
+    <div class="wrapper">
+      <main><article>
+  <div>
+    <h1>Max vaillancourt's jekyll template tutorial</h1>
+    <time datetime="2022-10-09T15:04:10-04:00">
+      Last updated on October 9, 2022
+      
+    </time>
+  </div>
+
+  <div id="notes-entry-container">
+    <content>
+      <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<hr>
+<h5 id="more-metadata">More Metadata</h5>
+<p>source: https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyll
+author: <span title="There is no note that matches this link." class="invalid-link">  <span class="invalid-link-brackets">[[</span>  Vaillancourt, Maxime|Maxime Vaillancourt  <span class="invalid-link-brackets">]]</span></span>
+—</p>
+<h1 id="setting-up-your-own-digital-garden-with-jekyll">Setting up your own digital garden with Jekyll</h1>
+
+<p>May 20, 2020</p>
+
+<p><strong>Eager to try the demo of the template?</strong> 👉 <a href="https://digital-garden-jekyll-template.netlify.app/" target="_blank">digital-garden-jekyll-template.netlify.app</a></p>
+
+<p>Digital gardens and public note-taking spaces are <a href="https://twitter.com/ness_labs/status/1262778800649187330" target="_blank">all the rage these days</a>, as they’re a great way to foster an environment where ideas mesh together and others can take inspiration from. You can set up a digital garden of your own in a few minutes, and have your own personal corner of the Internet where you’ll seed and grow ideas.</p>
+
+<p>If you’re familiar with Markdown and/or HTML, you’ll be right at home, as that’s how your notes will be formatted.</p>
+
+<p>The end result will look similar to this:</p>
+
+<p><img src="https://user-images.githubusercontent.com/8457808/82400515-7d026d80-9a25-11ea-83f1-3b9cb8347e07.png" alt=""></p>
+
+<p>If you happen to use <strong>Obsidian</strong> to work on your notes, you’ll likely want to open <a href="https://refinedmind.co/obsidian-jekyll-workflow" target="_blank">this guide from Mike</a> and read through it in parallel with this one.</p>
+
+<p>Alternatively, if you use <strong>Roam</strong> and would like to automatically convert your Roam Research backup to a garden using this template, take a look at <a href="https://github.com/DoomHammer/roam-to-git/tree/roam-to-garden" target="_blank">this repository</a>.</p>
+
+<p>Without further ado, let’s get started!</p>
+
+<h2 id="instructions">Instructions</h2>
+
+<h3 id="0-set-up-prerequisites">0. Set up prerequisites</h3>
+
+<p>For this tutorial, we’ll need to install a few things on your machine (you may have some of these already). Following the instructions on each website to install them.</p>
+
+<ul>
+  <li><a href="https://www.ruby-lang.org/" target="_blank">Ruby</a></li>
+  <li><a href="https://rubygems.org/" target="_blank">RubyGems</a></li>
+  <li><a href="https://git-scm.com/downloads" target="_blank">Git</a></li>
+</ul>
+
+<p>You’ll also need to create accounts on the following services:</p>
+
+<ul>
+  <li>
+<a href="https://github.com/join" target="_blank">GitHub</a> (to store your digital garden files)</li>
+  <li>
+<a href="https://app.netlify.com/signup" target="_blank">Netlify</a> (to serve your digital garden website to the world)</li>
+</ul>
+
+<p>Once everything is set up, let’s start creating your own digital garden.</p>
+
+<h3 id="1-create-a-fork-of-the-template-repository">1. Create a fork of the template repository</h3>
+
+<p>To simplify things, I provide the template shown in the image above to get started. You can always tweak this template to your taste later.</p>
+
+<p>Visit the GitHub page for my template repository (<a href="https://github.com/maximevaillancourt/digital-garden-jekyll-template" target="_blank"><code class="language-plaintext highlighter-rouge">maximevaillancourt/digital-garden-jekyll-template</code></a>), and fork it to your account using the Fork button:</p>
+
+<p><img src="https://help.github.com/assets/images/help/repository/fork_button.jpg" alt=""></p>
+
+<p>Once the forking process is complete, you should have a fork (essentially a copy) of my template in your own GitHub account. On the GitHub page for your repository, click on the green “Clone or download” button, and copy the URL: we’ll need it for the next step.</p>
+
+<h3 id="2-clone-your-repository-locally">2. Clone your repository locally</h3>
+
+<p>Next, we want to download the files from your GitHub repository onto your local machine. To do this, replace <code class="language-plaintext highlighter-rouge">&lt;YOUR_COPIED_URL_HERE&gt;</code> in the command below with the URL you copied in the previous step, then execute this command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone &lt;YOUR_COPIED_URL_HERE&gt; my-digital-garden
+</code></pre></div></div>
+
+<p>As a reference point, this is how it looks like for me (the difference is likely just the GitHub username):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone git@github.com:maximevaillancourt/digital-garden-jekyll-template.git my-digital-garden
+</code></pre></div></div>
+
+<p>Then, navigate into the directory that was just created:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd my-digital-garden
+</code></pre></div></div>
+
+<h3 id="3-test-out-the-site-locally">3. Test out the site locally</h3>
+
+<p>Sweet! You now have your repository’s source code on your machine. Within the <code class="language-plaintext highlighter-rouge">my-digital-garden</code> directory, run the following command to install the necessary dependencies like Jekyll:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ bundle
+</code></pre></div></div>
+
+<p>Once that’s done, ask Jekyll to start serving the site locally:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ bundle exec jekyll serve
+</code></pre></div></div>
+
+<p>Then, open up <a href="http://localhost:4000/" target="_blank"><code class="language-plaintext highlighter-rouge">http://localhost:4000</code></a> in your browser.</p>
+
+<p>If everything’s done correctly, you should now see the home page of your digital garden. 🎉</p>
+
+<p>Keep in mind that this site is only available locally (notice the <code class="language-plaintext highlighter-rouge">localhost</code> part of the URL), so if we want it to be available on the Internet for everyone to enjoy, we need to deploy it to the Internet: we’ll use Netlify for that in the next step.</p>
+
+<h3 id="4-connect-your-github-repository-to-netlify">4. Connect your GitHub repository to Netlify</h3>
+
+<p>Netlify lets you automatically deploy your digital garden on to the Internet when you update your GitHub repository. To do this, we need to connect your GitHub repository to Netlify:</p>
+
+<ol>
+  <li>Log in to <a href="https://app.netlify.com/" target="_blank">Netlify</a>
+</li>
+  <li>Once logged in, click the “New site from Git” button</li>
+  <li>On the next page, select GitHub as the continuous deployment provider (you may need to authorize the connection, in which case, approve it)</li>
+  <li>On the next page, select your digital garden repository from the list</li>
+  <li>On the next page, keep the default settings, and click on “Deploy site”.</li>
+</ol>
+
+<p>That was easy! We’re almost done.</p>
+
+<p>Wait a couple of minutes for the initial deploy to complete.</p>
+
+<p>Once that’s done, your digital garden should be available on the Internet via a generic Netlify URL, which you can change to a custom domain later if you’d like.</p>
+
+<p>Now the cool thing is this: whenever you push an update to your GitHub repository, Netlify will automatically deploy your updates to the Internet.</p>
+
+<h3 id="5-start-tending-to-your-digital-garden">5. Start tending to your digital garden</h3>
+
+<p>At this point, you can start updating the files on your machine (in the <code class="language-plaintext highlighter-rouge">my-digital-garden</code> folder) to change your digital garden to your liking: update the copy, add some notes, tweak the layout, customize the colors, etc.</p>
+
+<p>Once you have something you’re happy with, push your changes to your GitHub repository with the following commands:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git add --all
+$ git commit -m 'Update content'
+$ git push origin master
+</code></pre></div></div>
+
+<p>If that command succeeds and the rest of the tutorial was done correctly, in a couple of minutes, you should see your changes live on your Netlify website. 🚀</p>
+
+<p>And we’re done! You now have your own digital garden. Take care of your mind and the rest will follow. 🍃</p>
+</body></html>
+
+    </content>
+
+    <side style="font-size: 0.9em">
+      <h3 style="margin-bottom: 1em">Notes mentioning this note</h3>
+      
+      <div style="display: grid; grid-gap: 1em; grid-template-columns: repeat(1fr);">
+      
+        <div class="backlink-box">
+        <a class="internal-link" href="/digital-garden-dev-setup">Digital garden dev setup</a><br>
+        <div style="font-size: 0.9em">
+  [!warning] Nerd Stuff 🧑‍🔬
+***
+
+</div>
+        </div>
+      
+      </div>
+      
+    </side>
+  </div>
+</article>
+
+<hr>
+
+<p>Here are all the notes in this garden, along with their links, visualized as a graph.</p>
+
+<style>
+  .links line {
+    stroke: #ccc;
+    opacity: 0.5;
+  }
+
+  .nodes circle {
+    cursor: pointer;
+    fill: #8b88e6;
+    transition: all 0.15s ease-out;
+  }
+
+  .text text {
+    cursor: pointer;
+    fill: #333;
+    text-shadow: -1px -1px 0 #fafafabb, 1px -1px 0 #fafafabb, -1px 1px 0 #fafafabb, 1px 1px 0 #fafafabb;
+  }
+
+  .nodes [active],
+  .text [active] {
+    cursor: pointer;
+    fill: black;
+  }
+
+  .inactive {
+    opacity: 0.1;
+    transition: all 0.15s ease-out;
+  }
+
+  #graph-wrapper {
+    background: #fcfcfc;
+    border-radius: 4px;
+    height: auto;
+  }
+</style>
+
+<div id="graph-wrapper">
+  <script>
+    var commentFlag = true;
+    
+    window.addEventListener("load", loadGraph);
+    window.addEventListener("scroll", loadGraph);
+
+    function loadGraph() {
+      if (!( document.getElementById("graph-wrapper").getBoundingClientRect().top <
+             window.innerHeight * 1.5 &&
+          commentFlag)){
+        return;
+      }
+      var oScript = document.createElement("script");
+      oScript.src = "https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js";
+      oScript.crossOrigin = 'anonymous';
+      oScript.integrity =
+        "sha512-FHsFVKQ/T1KWJDGSbrUhTJyS1ph3eRrxI228ND0EGaEp6v4a/vGwPWd3Dtd/+9cI7ccofZvl/wulICEurHN1pg==";
+      document.body.appendChild(oScript);
+      oScript.onload = () => {
+        const MINIMAL_NODE_SIZE = 8;
+        const MAX_NODE_SIZE = 12;
+        const ACTIVE_RADIUS_FACTOR = 1.5;
+        const STROKE = 1;
+        const FONT_SIZE = 16;
+        const TICKS = 200;
+        const FONT_BASELINE = 40;
+        const MAX_LABEL_LENGTH = 50;
+
+        const graphData = {"edges":[{"source":"68105103105116971083210397114100101110","target":"68105103105116971083210397114100101110"},{"source":"779712032118971051081089711099111117114116391153210610110712110810832116101109112108971161013211611711611111410597108","target":"68105103105116971083210397114100101110"},{"source":"681051031051169710832103971141001011103210010111832115101116117112","target":"68105103105116971083210397114100101110"},{"source":"8410410132103971141001011103210397116101","target":"68105103105116971083210397114100101110"},{"source":"681051031051169710832103971141001011103210010111832115101116117112","target":"779712032118971051081089711099111117114116391153210610110712110810832116101109112108971161013211611711611111410597108"},{"source":"68105103105116971083210397114100101110","target":"78111116105111110"},{"source":"781111161013211697107105110103329711499104101116121112101115","target":"78111116105111110"},{"source":"68105103105116971083210397114100101110","target":"799811510510010597110"},{"source":"779712032118971051081089711099111117114116391153210610110712110810832116101109112108971161013211611711611111410597108","target":"799811510510010597110"},{"source":"781111161013211697107105110103329711499104101116121112101115","target":"799811510510010597110"},{"source":"799811510510010597110","target":"799811510510010597110"},{"source":"8211197109321141011151019711499104","target":"799811510510010597110"},{"source":"8410410132103971141001011103210397116101","target":"681051031051169710832103971141001011103210010111832115101116117112"},{"source":"68105103105116971083210397114100101110","target":"8211197109321141011151019711499104"},{"source":"799811510510010597110","target":"8211197109321141011151019711499104"},{"source":"681051031051169710832103971141001011103210010111832115101116117112","target":"83121109108105110107115"}],"nodes":[{"id":"68105103105116971083210397114100101110","path":"/digital-garden","label":"Digital garden"},{"id":"719711611598121","path":"/gatsby","label":"Gatsby"},{"id":"779712032118971051081089711099111117114116391153210610110712110810832116101109112108971161013211611711611111410597108","path":"/max-vaillancourt-s-jekyll-template-tutorial","label":"Max vaillancourt's jekyll template tutorial"},{"id":"781111161013211697107105110103329711499104101116121112101115","path":"/note-taking-archetypes","label":"Note taking archetypes"},{"id":"78111116105111110","path":"/notion","label":"Notion"},{"id":"799811510510010597110","path":"/obsidian","label":"Obsidian"},{"id":"681051031051169710832103971141001011103210010111832115101116117112","path":"/digital-garden-dev-setup","label":"Digital garden dev setup"},{"id":"8211197109321141011151019711499104","path":"/roam-research","label":"Roam research"},{"id":"8410410132103971141001011103210397116101","path":"/the-garden-gate","label":"The garden gate"},{"id":"83121109108105110107115","path":"/symlinks","label":"Symlinks"}]}
+        let nodesData = graphData.nodes;
+        let linksData = graphData.edges;
+
+        const nodeSize = {};
+
+        const updateNodeSize = () => {
+          nodesData.forEach((el) => {
+            let weight =
+              3 *
+              Math.sqrt(
+                linksData.filter((l) => l.source.id === el.id || l.target.id === el.id)
+                  .length + 1
+              );
+            if (weight < MINIMAL_NODE_SIZE) {
+              weight = MINIMAL_NODE_SIZE;
+            } else if (weight > MAX_NODE_SIZE) {
+              weight = MAX_NODE_SIZE;
+            }
+            nodeSize[el.id] = weight;
+          });
+        };
+
+        const onClick = (d) => {
+          window.location = d.path
+        };
+
+        const onMouseover = function (d) {
+          const relatedNodesSet = new Set();
+          linksData
+            .filter((n) => n.target.id == d.id || n.source.id == d.id)
+            .forEach((n) => {
+              relatedNodesSet.add(n.target.id);
+              relatedNodesSet.add(n.source.id);
+            });
+
+          node.attr("class", (node_d) => {
+            if (node_d.id !== d.id && !relatedNodesSet.has(node_d.id)) {
+              return "inactive";
+            }
+            return "";
+          });
+
+          link.attr("class", (link_d) => {
+            if (link_d.source.id !== d.id && link_d.target.id !== d.id) {
+              return "inactive";
+            }
+            return "";
+          });
+
+          link.attr("stroke-width", (link_d) => {
+            if (link_d.source.id === d.id || link_d.target.id === d.id) {
+              return STROKE * 4;
+            }
+            return STROKE;
+          });
+          text.attr("class", (text_d) => {
+            if (text_d.id !== d.id && !relatedNodesSet.has(text_d.id)) {
+              return "inactive";
+            }
+            return "";
+          });
+        };
+
+        const onMouseout = function (d) {
+          node.attr("class", "");
+          link.attr("class", "");
+          text.attr("class", "");
+          link.attr("stroke-width", STROKE);
+        };
+
+        const sameNodes = (previous, next) => {
+          if (next.length !== previous.length) {
+            return false;
+          }
+
+          const map = new Map();
+          for (const node of previous) {
+            map.set(node.id, node.label);
+          }
+
+          for (const node of next) {
+            const found = map.get(node.id);
+            if (!found || found !== node.title) {
+              return false;
+            }
+          }
+
+          return true;
+        };
+
+        const sameEdges = (previous, next) => {
+          if (next.length !== previous.length) {
+            return false;
+          }
+
+          const set = new Set();
+          for (const edge of previous) {
+            set.add(`${edge.source.id}-${edge.target.id}`);
+          }
+
+          for (const edge of next) {
+            if (!set.has(`${edge.source.id}-${edge.target.id}`)) {
+              return false;
+            }
+          }
+
+          return true;
+        };
+
+        const graphWrapper = document.getElementById('graph-wrapper')
+        const element = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        element.setAttribute("width", graphWrapper.getBoundingClientRect().width);
+        element.setAttribute("height", window.innerHeight * 0.8);
+        graphWrapper.appendChild(element);
+
+        const reportWindowSize = () => {
+          element.setAttribute("width", window.innerWidth);
+          element.setAttribute("height", window.innerHeight);
+        };
+
+        window.onresize = reportWindowSize;
+
+        const svg = d3.select("svg");
+        const width = Number(svg.attr("width"));
+        const height = Number(svg.attr("height"));
+        let zoomLevel = 1;
+
+        const simulation = d3
+          .forceSimulation(nodesData)
+          .force("forceX", d3.forceX().x(width / 2))
+          .force("forceY", d3.forceY().y(height / 2))
+          .force("charge", d3.forceManyBody())
+          .force(
+            "link",
+            d3
+              .forceLink(linksData)
+              .id((d) => d.id)
+              .distance(70)
+          )
+          .force("center", d3.forceCenter(width / 2, height / 2))
+          .force("collision", d3.forceCollide().radius(80))
+          .stop();
+
+        const g = svg.append("g");
+        let link = g.append("g").attr("class", "links").selectAll(".link");
+        let node = g.append("g").attr("class", "nodes").selectAll(".node");
+        let text = g.append("g").attr("class", "text").selectAll(".text");
+
+        const resize = () => {
+          if (d3.event) {
+            const scale = d3.event.transform;
+            zoomLevel = scale.k;
+            g.attr("transform", scale);
+          }
+
+          const zoomOrKeep = (value) => (zoomLevel >= 1 ? value / zoomLevel : value);
+
+          const font = Math.max(Math.round(zoomOrKeep(FONT_SIZE)), 1);
+
+          text.attr("font-size", (d) => font);
+          text.attr("y", (d) => d.y - zoomOrKeep(FONT_BASELINE) + 8);
+          link.attr("stroke-width", zoomOrKeep(STROKE));
+          node.attr("r", (d) => {
+            return zoomOrKeep(nodeSize[d.id]);
+          });
+          svg
+            .selectAll("circle")
+            .filter((_d, i, nodes) => d3.select(nodes[i]).attr("active"))
+            .attr("r", (d) => zoomOrKeep(ACTIVE_RADIUS_FACTOR * nodeSize[d.id]));
+        };
+
+        const ticked = () => {
+          node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
+          text
+            .attr("x", (d) => d.x)
+            .attr("y", (d) => d.y - (FONT_BASELINE - nodeSize[d.id]) / zoomLevel);
+          link
+            .attr("x1", (d) => d.source.x)
+            .attr("y1", (d) => d.source.y)
+            .attr("x2", (d) => d.target.x)
+            .attr("y2", (d) => d.target.y);
+        };
+
+        const restart = () => {
+          updateNodeSize();
+          node = node.data(nodesData, (d) => d.id);
+          node.exit().remove();
+          node = node
+            .enter()
+            .append("circle")
+            .attr("r", (d) => {
+              return nodeSize[d.id];
+            })
+            .on("click", onClick)
+            .on("mouseover", onMouseover)
+            .on("mouseout", onMouseout)
+            .merge(node);
+
+          link = link.data(linksData, (d) => `${d.source.id}-${d.target.id}`);
+          link.exit().remove();
+          link = link.enter().append("line").attr("stroke-width", STROKE).merge(link);
+
+          text = text.data(nodesData, (d) => d.label);
+          text.exit().remove();
+          text = text
+            .enter()
+            .append("text")
+            .text((d) => shorten(d.label.replace(/_*/g, ""), MAX_LABEL_LENGTH))
+            .attr("font-size", `${FONT_SIZE}px`)
+            .attr("text-anchor", "middle")
+            .attr("alignment-baseline", "central")
+            .on("click", onClick)
+            .on("mouseover", onMouseover)
+            .on("mouseout", onMouseout)
+            .merge(text);
+
+          node.attr("active", (d) => isCurrentPath(d.path) ? true : null);
+          text.attr("active", (d) => isCurrentPath(d.path) ? true : null);
+
+          simulation.nodes(nodesData);
+          simulation.force("link").links(linksData);
+          simulation.alpha(1).restart();
+          simulation.stop();
+
+          for (let i = 0; i < TICKS; i++) {
+            simulation.tick();
+          }
+
+          ticked();
+        };
+
+        const zoomHandler = d3.zoom().scaleExtent([0.2, 3]).on("zoom", resize);
+
+        zoomHandler(svg);
+        restart();
+
+        function isCurrentPath(notePath) {
+          return window.location.pathname.includes(notePath)
+        }
+
+        function shorten(str, maxLen, separator = ' ') {
+          if (str.length <= maxLen) return str;
+          return str.substr(0, str.lastIndexOf(separator, maxLen)) + '...';
+        }
+        commentFlag = false;
+      }
+    }
+  </script>
+</div>
+
+</main>
+      <footer>This is the footer. Include anything you'd like here, like a link to an <a class="internal-link" href="/about">About</a> page.
+</footer>
+    </div>
+
+    <!-- That file is not particularly elegant. This will need a refactor at some point. -->
+<style>
+  content a.internal-link {
+    border-color: #8b88e6;
+    background-color: #efefff;
+  }
+
+  #tooltip-wrapper {
+    background: white;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    position: absolute;
+    width: 400px;
+    height: 250px;
+    font-size: 0.8em;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    opacity: 0;
+    transition: opacity 100ms;
+  }
+
+  #tooltip-wrapper:after {
+		content: "";
+		position: absolute;
+		z-index: 1;
+		bottom: 0;
+		left: 0;
+		pointer-events: none;
+		background-image: linear-gradient(to bottom, rgba(255,255,255, 0), rgba(255,255,255, 1) 90%);
+		width: 100%;
+		height: 75px;
+  }
+</style>
+
+<div style="opacity: 0; display: none;" id='tooltip-wrapper'>
+  <div id='tooltip-content'>
+  </div>
+</div>
+
+<iframe style="display: none; height: 0; width: 0;" id='link-preview-iframe' src="">
+</iframe>
+
+<script>
+  var opacityTimeout;
+  var contentTimeout;
+  var transitionDurationMs = 100;
+
+  var iframe = document.getElementById('link-preview-iframe')
+  var tooltipWrapper = document.getElementById('tooltip-wrapper')
+  var tooltipContent = document.getElementById('tooltip-content')
+
+  var linkHistories = {};
+
+  function hideTooltip() {
+    opacityTimeout = setTimeout(function() {
+      tooltipWrapper.style.opacity = 0;
+      contentTimeout = setTimeout(function() {
+        tooltipContent.innerHTML = '';
+        tooltipWrapper.style.display = 'none';
+      }, transitionDurationMs + 1);
+    }, transitionDurationMs)
+  }
+
+  function showTooltip(event) {
+    var elem = event.target;
+    var elem_props = elem.getClientRects()[elem.getClientRects().length - 1];
+    var top = window.pageYOffset || document.documentElement.scrollTop
+
+    if (event.target.host === window.location.host) {
+      if (!linkHistories[event.target.href]) {
+        iframe.src = event.target.href
+        iframe.onload = function() {
+          tooltipContentHtml = ''
+          tooltipContentHtml += '<div style="font-weight: bold;">' + iframe.contentWindow.document.querySelector('h1').innerHTML + '</div>'
+          tooltipContentHtml += iframe.contentWindow.document.querySelector('content').innerHTML
+
+          tooltipContent.innerHTML = tooltipContentHtml
+          linkHistories[event.target.href] = tooltipContentHtml
+
+          tooltipWrapper.style.display = 'block';
+          setTimeout(function() {
+            tooltipWrapper.style.opacity = 1;
+          }, 1)
+        } 
+      } else {
+        tooltipContent.innerHTML = linkHistories[event.target.href]
+        tooltipWrapper.style.display = 'block';
+        setTimeout(function() {
+          tooltipWrapper.style.opacity = 1;
+        }, 1)
+      }
+
+
+      tooltipWrapper.style.left = elem_props.left - (tooltipWrapper.offsetWidth / 2) + (elem_props.width / 2) + "px";
+      if ((window.innerHeight - elem_props.top) < (tooltipWrapper.offsetHeight)) {
+          tooltipWrapper.style.top = elem_props.top + top - tooltipWrapper.offsetHeight - 10 + "px";
+      } else if ((window.innerHeight - elem_props.top) > (tooltipWrapper.offsetHeight)) {
+          tooltipWrapper.style.top = elem_props.top + top + 35 + "px";
+      }
+
+      if ((elem_props.left + (elem_props.width / 2)) < (tooltipWrapper.offsetWidth / 2)) {
+          tooltipWrapper.style.left = "10px";
+      } else if ((document.body.clientWidth - elem_props.left - (elem_props.width / 2)) < (tooltipWrapper.offsetWidth / 2)) {
+          tooltipWrapper.style.left = document.body.clientWidth - tooltipWrapper.offsetWidth - 20 + "px";
+      }
+    }
+  }
+
+  function setupListeners(linkElement) {
+    linkElement.addEventListener('mouseleave', function(_event) {
+      hideTooltip();
+    });
+
+    tooltipWrapper.addEventListener('mouseleave', function(_event) {
+      hideTooltip();
+    });
+
+    linkElement.addEventListener('touchend', function(_event) {
+      hideTooltip();
+    });
+
+    tooltipWrapper.addEventListener('touchend', function(_event) {
+      hideTooltip();
+    });
+
+    linkElement.addEventListener('mouseenter', function(event) {
+      clearTimeout(opacityTimeout);
+      clearTimeout(contentTimeout);
+      showTooltip(event);
+    });
+
+    tooltipWrapper.addEventListener('mouseenter', function(event) {
+      clearTimeout(opacityTimeout);
+      clearTimeout(contentTimeout);
+    });
+  }
+
+  document.querySelectorAll('content a').forEach(setupListeners);
+</script>
+
+  </body>
+</html>
