@@ -1,15 +1,13 @@
-title:               garden.mikedownes.dev
+title:               mikedownes.dev
 include:             ['_pages']
 exclude:             [
   '_includes/notes_graph.json', 
-  # '_cloud-vault-symlink/*.pdf',
-  # '_cloud-vault-symlink/**/*.pdf', 
-  # '_cloud-vault-symlink/*.png',
-  # '_cloud-vault-symlink/**/*.png'
   '_notes/*.pdf',
   '_notes/**/*.pdf', 
   '_notes/*.png',
   '_notes/**/*.png',
+  '_notes/**/*.gif',
+  '_notes/Attachments/*',
   '_notes/.obsidian/*'
 ]
 # You may need to change the base URL depending on your deploy configuration.
@@ -44,9 +42,6 @@ collections:
   notes:
     output: true
     permalink: /:slug
-  # cloud-vault-symlink:
-  #   output: true
-  #   permalink: /:slug
 
 defaults:
   - scope:
@@ -58,14 +53,4 @@ defaults:
     values:
       layout: "note"
       published: false
-  # - scope:
-  #     path: "_cloud-vault-symlink/*.md"
-  #   values:
-  #     layout: "note"
-  #     published: false
-  # - scope:
-  #     path: "_cloud-vault-symlink/**/*.md"
-  #   values:
-  #     layout: "note"
-  #     published: false
 

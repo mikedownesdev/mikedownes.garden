@@ -1,9 +1,8 @@
 # Generated website directory
 # _site/
 
-# Don't push .md source files
+# Don't commit notes to the git history
 _notes/
-_oldnotes/
 
 # Sass cache
 .sass-cache/

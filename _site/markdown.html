@@ -3,11 +3,11 @@
   <head>
   <meta charset="UTF-8">
 
-  <link rel="canonical" href="/max-vaillancourt-s-jekyll-template-tutorial" />
+  <link rel="canonical" href="/markdown" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="More Metadata">
+  <meta name="description" content="">
 
   <meta property="og:site_name" content="mikedownes.dev">
 
@@ -16,11 +16,11 @@
   <link rel="stylesheet" href="/styles.css">
 
   
-  <meta property="og:description" content="More Metadata"/>
+  <meta property="og:description" content=""/>
   
 
   
-  <meta property="og:title" content="Max vaillancourt's jekyll template tutorial">
+  <meta property="og:title" content="Markdown">
   <meta property="og:type" content="article">
   
 
@@ -29,13 +29,13 @@
   <meta property="article:author" content="/">
   
 
-  <meta property="og:url" content="/max-vaillancourt-s-jekyll-template-tutorial" />
+  <meta property="og:url" content="/markdown" />
 
   
 
   <title>
     
-      Max vaillancourt's jekyll template tutorial &mdash; mikedownes.dev
+      Markdown &mdash; mikedownes.dev
     
   </title>
 </head>
@@ -48,8 +48,8 @@
     <div class="wrapper">
       <main><article>
   <div>
-    <h1>Max vaillancourt's jekyll template tutorial</h1>
-    <time datetime="2022-10-10T15:26:14-04:00">
+    <h1>Markdown</h1>
+    <time datetime="2022-10-10T14:45:07-04:00">
       Last updated on October 10, 2022
       
     </time>
@@ -58,138 +58,7 @@
   <div id="notes-entry-container">
     <content>
       <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
-<html><body>
-<h5 id="more-metadata">More Metadata</h5>
 
-<p>source: https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyll
-author: <a class="internal-link" href="/vaillancourt-maxime">Maxime Vaillancourt</a></p>
-
-<hr>
-
-<h1 id="setting-up-your-own-digital-garden-with-jekyll">Setting up your own digital garden with Jekyll</h1>
-
-<p>May 20, 2020</p>
-
-<p><strong>Eager to try the demo of the template?</strong> 👉 <a href="https://digital-garden-jekyll-template.netlify.app/" target="_blank">digital-garden-jekyll-template.netlify.app</a></p>
-
-<p>Digital gardens and public note-taking spaces are <a href="https://twitter.com/ness_labs/status/1262778800649187330" target="_blank">all the rage these days</a>, as they’re a great way to foster an environment where ideas mesh together and others can take inspiration from. You can set up a digital garden of your own in a few minutes, and have your own personal corner of the Internet where you’ll seed and grow ideas.</p>
-
-<p>If you’re familiar with Markdown and/or HTML, you’ll be right at home, as that’s how your notes will be formatted.</p>
-
-<p>The end result will look similar to this:</p>
-
-<p><img src="https://user-images.githubusercontent.com/8457808/82400515-7d026d80-9a25-11ea-83f1-3b9cb8347e07.png" alt=""></p>
-
-<p>If you happen to use <strong>Obsidian</strong> to work on your notes, you’ll likely want to open <a href="https://refinedmind.co/obsidian-jekyll-workflow" target="_blank">this guide from Mike</a> and read through it in parallel with this one.</p>
-
-<p>Alternatively, if you use <strong>Roam</strong> and would like to automatically convert your Roam Research backup to a garden using this template, take a look at <a href="https://github.com/DoomHammer/roam-to-git/tree/roam-to-garden" target="_blank">this repository</a>.</p>
-
-<p>Without further ado, let’s get started!</p>
-
-<h2 id="instructions">Instructions</h2>
-
-<h3 id="0-set-up-prerequisites">0. Set up prerequisites</h3>
-
-<p>For this tutorial, we’ll need to install a few things on your machine (you may have some of these already). Following the instructions on each website to install them.</p>
-
-<ul>
-  <li><a href="https://www.ruby-lang.org/" target="_blank">Ruby</a></li>
-  <li><a href="https://rubygems.org/" target="_blank">RubyGems</a></li>
-  <li><a href="https://git-scm.com/downloads" target="_blank">Git</a></li>
-</ul>
-
-<p>You’ll also need to create accounts on the following services:</p>
-
-<ul>
-  <li>
-<a href="https://github.com/join" target="_blank">GitHub</a> (to store your digital garden files)</li>
-  <li>
-<a href="https://app.netlify.com/signup" target="_blank">Netlify</a> (to serve your digital garden website to the world)</li>
-</ul>
-
-<p>Once everything is set up, let’s start creating your own digital garden.</p>
-
-<h3 id="1-create-a-fork-of-the-template-repository">1. Create a fork of the template repository</h3>
-
-<p>To simplify things, I provide the template shown in the image above to get started. You can always tweak this template to your taste later.</p>
-
-<p>Visit the GitHub page for my template repository (<a href="https://github.com/maximevaillancourt/digital-garden-jekyll-template" target="_blank"><code class="language-plaintext highlighter-rouge">maximevaillancourt/digital-garden-jekyll-template</code></a>), and fork it to your account using the Fork button:</p>
-
-<p><img src="https://help.github.com/assets/images/help/repository/fork_button.jpg" alt=""></p>
-
-<p>Once the forking process is complete, you should have a fork (essentially a copy) of my template in your own GitHub account. On the GitHub page for your repository, click on the green “Clone or download” button, and copy the URL: we’ll need it for the next step.</p>
-
-<h3 id="2-clone-your-repository-locally">2. Clone your repository locally</h3>
-
-<p>Next, we want to download the files from your GitHub repository onto your local machine. To do this, replace <code class="language-plaintext highlighter-rouge">&lt;YOUR_COPIED_URL_HERE&gt;</code> in the command below with the URL you copied in the previous step, then execute this command:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone &lt;YOUR_COPIED_URL_HERE&gt; my-digital-garden
-</code></pre></div></div>
-
-<p>As a reference point, this is how it looks like for me (the difference is likely just the GitHub username):</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone git@github.com:maximevaillancourt/digital-garden-jekyll-template.git my-digital-garden
-</code></pre></div></div>
-
-<p>Then, navigate into the directory that was just created:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd my-digital-garden
-</code></pre></div></div>
-
-<h3 id="3-test-out-the-site-locally">3. Test out the site locally</h3>
-
-<p>Sweet! You now have your repository’s source code on your machine. Within the <code class="language-plaintext highlighter-rouge">my-digital-garden</code> directory, run the following command to install the necessary dependencies like Jekyll:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ bundle
-</code></pre></div></div>
-
-<p>Once that’s done, ask Jekyll to start serving the site locally:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ bundle exec jekyll serve
-</code></pre></div></div>
-
-<p>Then, open up <a href="http://localhost:4000/" target="_blank"><code class="language-plaintext highlighter-rouge">http://localhost:4000</code></a> in your browser.</p>
-
-<p>If everything’s done correctly, you should now see the home page of your digital garden. 🎉</p>
-
-<p>Keep in mind that this site is only available locally (notice the <code class="language-plaintext highlighter-rouge">localhost</code> part of the URL), so if we want it to be available on the Internet for everyone to enjoy, we need to deploy it to the Internet: we’ll use Netlify for that in the next step.</p>
-
-<h3 id="4-connect-your-github-repository-to-netlify">4. Connect your GitHub repository to Netlify</h3>
-
-<p>Netlify lets you automatically deploy your digital garden on to the Internet when you update your GitHub repository. To do this, we need to connect your GitHub repository to Netlify:</p>
-
-<ol>
-  <li>Log in to <a href="https://app.netlify.com/" target="_blank">Netlify</a>
-</li>
-  <li>Once logged in, click the “New site from Git” button</li>
-  <li>On the next page, select GitHub as the continuous deployment provider (you may need to authorize the connection, in which case, approve it)</li>
-  <li>On the next page, select your digital garden repository from the list</li>
-  <li>On the next page, keep the default settings, and click on “Deploy site”.</li>
-</ol>
-
-<p>That was easy! We’re almost done.</p>
-
-<p>Wait a couple of minutes for the initial deploy to complete.</p>
-
-<p>Once that’s done, your digital garden should be available on the Internet via a generic Netlify URL, which you can change to a custom domain later if you’d like.</p>
-
-<p>Now the cool thing is this: whenever you push an update to your GitHub repository, Netlify will automatically deploy your updates to the Internet.</p>
-
-<h3 id="5-start-tending-to-your-digital-garden">5. Start tending to your digital garden</h3>
-
-<p>At this point, you can start updating the files on your machine (in the <code class="language-plaintext highlighter-rouge">my-digital-garden</code> folder) to change your digital garden to your liking: update the copy, add some notes, tweak the layout, customize the colors, etc.</p>
-
-<p>Once you have something you’re happy with, push your changes to your GitHub repository with the following commands:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git add --all
-$ git commit -m 'Update content'
-$ git push origin master
-</code></pre></div></div>
-
-<p>If that command succeeds and the rest of the tutorial was done correctly, in a couple of minutes, you should see your changes live on your Netlify website. 🚀</p>
-
-<p>And we’re done! You now have your own digital garden. Take care of your mind and the rest will follow. 🍃</p>
-</body></html>
 
     </content>
 
@@ -199,10 +68,22 @@ $ git push origin master
       <div style="display: grid; grid-gap: 1em; grid-template-columns: repeat(1fr);">
       
         <div class="backlink-box">
-        <a class="internal-link" href="/digital-garden-dev-setup">Digital garden dev setup</a><br>
+        <a class="internal-link" href="/obsidian">Obsidian</a><br>
+        <div style="font-size: 0.9em">Source: https://obsidian.md/ *** [!tldr] What is Obsidian A [[Second Brain]], for you, forever. Obsidian is a powerful knowledge base on top of...</div>
+        </div>
+      
+        <div class="backlink-box">
+        <a class="internal-link" href="/roam-research">Roam research</a><br>
         <div style="font-size: 0.9em">
-  [!warning] Nerd Stuff 🧑‍🔬
+  [!tldr] What is Roam Research
+Roam Research is a note-taking tool for networked thought
 
+</div>
+        </div>
+      
+        <div class="backlink-box">
+        <a class="internal-link" href="/">The garden gate</a><br>
+        <div style="font-size: 0.9em">Welcome 🌳
 </div>
         </div>
       

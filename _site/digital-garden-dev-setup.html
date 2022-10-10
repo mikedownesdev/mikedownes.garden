@@ -7,16 +7,16 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="  [!warning] Nerd Stuff 🧑‍🔬***">
+  <meta name="description" content="  [!warning] Nerd Stuff 🧑‍🔬">
 
-  <meta property="og:site_name" content="garden.mikedownes.dev">
+  <meta property="og:site_name" content="mikedownes.dev">
 
   <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgo=">
 
   <link rel="stylesheet" href="/styles.css">
 
   
-  <meta property="og:description" content="  [!warning] Nerd Stuff 🧑‍🔬***"/>
+  <meta property="og:description" content="  [!warning] Nerd Stuff 🧑‍🔬"/>
   
 
   
@@ -25,7 +25,7 @@
   
 
   
-  <meta property="article:published_time" content="2022-10-09T19:24:04-04:00">
+  <meta property="article:published_time" content="2022-10-10T16:42:32-04:00">
   <meta property="article:author" content="/">
   
 
@@ -35,22 +35,22 @@
 
   <title>
     
-      Digital garden dev setup &mdash; garden.mikedownes.dev
+      Digital garden dev setup &mdash; mikedownes.dev
     
   </title>
 </head>
 
   <body>
     <nav><div>
-    <a class="internal-link" href="/"><b>garden.mikedownes.dev</b></a>
+    <a class="internal-link" href="/"><b>mikedownes.dev</b></a>
 </div>
 </nav>
     <div class="wrapper">
       <main><article>
   <div>
     <h1>Digital garden dev setup</h1>
-    <time datetime="2022-10-09T19:08:02-04:00">
-      Last updated on October 9, 2022
+    <time datetime="2022-10-10T16:06:36-04:00">
+      Last updated on October 10, 2022
       
     </time>
   </div>
@@ -60,28 +60,63 @@
       <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body>
 <blockquote>
-  <p>[!warning] Nerd Stuff 🧑‍🔬
-***</p>
+  <p>[!warning] Nerd Stuff 🧑‍🔬</p>
 </blockquote>
 
-<h2 id="scratch">Scratch</h2>
+<hr>
+
+<h2 id="next-up--notes-for-mike">Next up &amp; Notes for Mike</h2>
 <ul>
-  <li>Use <a href="https://github.com/maximevaillancourt/digital-garden-jekyll-template" target="_blank">Max’s Jekyll theme</a> to deploy notes
-    <blockquote>
-      <p>[!warning]</p>
-      <ul>
-        <li>This jekyll theme uses a <strong>custom plugin</strong> which GitHub Pages does not support</li>
-        <li>No Search</li>
-      </ul>
-    </blockquote>
+  <li>❗ CSS update
+    <ul>
+      <li>Some markdown blocks might not be rendering correctly
+        <ul>
+          <li>Search for the Obsidian CSS for the Quotes… quotes? type</li>
+        </ul>
+      </li>
+    </ul>
   </li>
-  <li>
-    <p>Can I add a flower shop?</p>
+  <li>❗️ Embedded images aren’t working
+    <ul>
+      <li><a class="internal-link" href="/who-is-mike-downes">See!?</a></li>
+      <li>Nor are ! statements for embedding other note content.
+        <ul>
+          <li>See <span title="There is no note that matches this link." class="invalid-link">  <span class="invalid-link-brackets">[[</span>  Digital Garden Dev Setup#Part 1 - Struggle with Ruby  <span class="invalid-link-brackets">]]</span></span>
+</li>
+          <li>See <span title="There is no note that matches this link." class="invalid-link">  <span class="invalid-link-brackets">[[</span>  #Part 1 - Struggle with Ruby  <span class="invalid-link-brackets">]]</span></span> which tries to load in some of Max’s tutorial content
+            <ul>
+              <li>…and also heading links, I guess…</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Check how this was happening in the original notes
+        <ul>
+          <li>
+<code class="language-plaintext highlighter-rouge">/assets</code>  … not sure how to get around this. See how Jekyll deals with the assets folder</li>
+        </ul>
+      </li>
+    </ul>
   </li>
-  <li>
-    <p>Apparently this <a href="https://github.com/jeffreytse/jekyll-deploy-action" target="_blank">GitHub action</a> might be able to circumvent the Github Pages problem</p>
+  <li>Change hosted URL to garden.mikedownes.dev?</li>
+  <li>Branching?</li>
+  <li>Commit on Save?</li>
+  <li>Graph improvements?
+    <ul>
+      <li>Seems like there might be a bug in the graph.
+        <ul>
+          <li>Seeing edges that don’t exist. Especially back to the home page</li>
+        </ul>
+      </li>
+    </ul>
   </li>
-  <li>Your GitHub Pages, especi</li>
+  <li>Search feature?</li>
+  <li>If you ever go back to a way of building on the server instead of locally:
+    <ul>
+      <li>Remember that this site uses custom plugins, which GitHub Pages no-likey</li>
+      <li>Apparently this <a href="https://github.com/jeffreytse/jekyll-deploy-action" target="_blank">GitHub action</a> might be able to circumvent the Github Pages problem</li>
+    </ul>
+  </li>
 </ul>
 
 <hr>
@@ -90,7 +125,7 @@
 
 <blockquote>
   <p>[!tldr] Summary
-<span title="There is no note that matches this link." class="invalid-link">  <span class="invalid-link-brackets">[[</span>  Vaillancourt, Maxime|Maxime Vaillancourt  <span class="invalid-link-brackets">]]</span></span> wrote a tutorial for setting up a <span title="There is no note that matches this link." class="invalid-link">  <span class="invalid-link-brackets">[[</span>  Jekyll  <span class="invalid-link-brackets">]]</span></span> project with their template: <a class="internal-link" href="/max-vaillancourt-s-jekyll-template-tutorial">Max Vaillancourt’s Jekyll Template Tutorial</a>. 
+<a class="internal-link" href="/vaillancourt-maxime">Maxime Vaillancourt</a> wrote a tutorial for setting up a <span title="There is no note that matches this link." class="invalid-link">  <span class="invalid-link-brackets">[[</span>  Jekyll  <span class="invalid-link-brackets">]]</span></span> project with their template: <a class="internal-link" href="/max-vaillancourt-s-jekyll-template-tutorial">Max Vaillancourt’s Jekyll Template Tutorial</a>. 
 This is my journey following along with the tutorial.</p>
 </blockquote>
 
@@ -112,6 +147,8 @@ This is my journey following along with the tutorial.</p>
   </li>
   <li>Ok so now my version of Ruby is the correct one… 😄</li>
 </ul>
+
+<hr>
 
 <h3 id="part-2---local-development">Part 2 - Local Development</h3>
 <p><span title="There is no note that matches this link." class="invalid-link">  <span class="invalid-link-brackets">[[</span>  Max Vaillancourt’s Jekyll Template Tutorial#1 Create a fork of the template repository|Step 1  <span class="invalid-link-brackets">]]</span></span> and <span title="There is no note that matches this link." class="invalid-link">  <span class="invalid-link-brackets">[[</span>  Max Vaillancourt’s Jekyll Template Tutorial#2 Clone your repository locally|Step 2  <span class="invalid-link-brackets">]]</span></span> had no problems!</p>
@@ -210,11 +247,14 @@ if on an m1 mac use <code class="language-plaintext highlighter-rouge">-- --wit
 
 <p>Success! 😄  <code class="language-plaintext highlighter-rouge">bundle</code> works successfully and so does <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code></p>
 
+<hr>
+
 <h3 id="part-3---hosting">Part 3 - Hosting</h3>
 <ul>
   <li>Kinda skipping over this a bit…
     <ul>
-      <li>Connect GitHub to Netlify</li>
+      <li>Connect GitHub to <span title="There is no note that matches this link." class="invalid-link">  <span class="invalid-link-brackets">[[</span>  Netlify  <span class="invalid-link-brackets">]]</span></span>
+</li>
       <li>Connect Google Domains to Netlify
         <ul>
           <li>https://www.youtube.com/watch?v=cDDr-NoI5fo</li>
@@ -222,27 +262,44 @@ if on an m1 mac use <code class="language-plaintext highlighter-rouge">-- --wit
       </li>
     </ul>
   </li>
-  <li>The DNS stuff is a bit weird</li>
+  <li>Configured the DNS settings as Netlify instructed</li>
 </ul>
 
-<h3 id="part-4---my-own-invention">Part 4 - My own invention</h3>
-<p>Given that I’ve already configured my personal notes in such a way that may not been incompatible with this system. I need to solve two things.</p>
+<hr>
 
-<h5 id="1-can-i-have-my-notes-folder-live-in-a-different-location">1. <strong>Can I have my notes folder live in a different location?</strong>
-</h5>
-<p>The Jekyll template requests that you place your notes to be published in a folder named <code class="language-plaintext highlighter-rouge">_notes</code>. I learned later that this is known as a <a href="https://jekyllrb.com/docs/collections/" target="_blank">collection</a>.  But I already have a notes folder (path) that I like to keep which enables me to access my notes from multiple devices.</p>
+<h3 id="part-4---adapting-to-my-setup--notes-locations">Part 4 - Adapting to my setup &gt; notes locations</h3>
 
-<p>Enter <a class="internal-link" href="/symlinks">symlinks</a> → With the following (templated) I was able to create a symlink inside of the project folder, and then rename it to <code class="language-plaintext highlighter-rouge">_notes</code>. In other words, the content in the <code class="language-plaintext highlighter-rouge">_notes</code> folder are actually located in a different location:</p>
+<p>Given that I’ve already configured my personal notes in such a way that may not be compatible with this system, I need to solve two things:</p>
+<ol>
+  <li><strong>Can I have my notes folder live in a different location?</strong></li>
+  <li><strong>Can I selectively publish notes?</strong></li>
+</ol>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># do this, then rename the short cut to _notes</span>
-<span class="nb">ln</span> <span class="nt">-s</span>  
+<p>We’ll get to the second point later; let’s address the first point now.</p>
+
+<p>The Jekyll template requests that you place your notes in a folder named <code class="language-plaintext highlighter-rouge">_notes</code>. I learned later that this is known as a <a href="https://jekyllrb.com/docs/collections/" target="_blank">collection</a>.  But I already have a notes folder (path) that I’d like to keep which enables me to access my notes from multiple devices.</p>
+
+<p>Enter <a class="internal-link" href="/symlinks">symlinks</a> → With the following code I was able to <strong>create a symlink to the true notes directory</strong> inside of the project folder. Then I simply renamed the symlink to <code class="language-plaintext highlighter-rouge">_notes</code>. Now the contents of the <code class="language-plaintext highlighter-rouge">_notes</code> folder are actually located in a different location:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># do this, then rename the shortcut to _notes</span>
+<span class="nb">ln</span> <span class="nt">-s</span> /path/to/preferred/notes/location /path/to/project/folder
 </code></pre></div></div>
 
-<h5 id="2-can-i-selectively-publish-notes">2 <strong>Can I selectively publish notes?</strong>
-</h5>
-<p>Since I use my notes for everything in my life, there’s likely some content I don’t want to share. Simple to-do lists, personally identifiable information (PII), etc.</p>
+<hr>
 
-<p>Turns out the <span title="There is no note that matches this link." class="invalid-link">  <span class="invalid-link-brackets">[[</span>  YAML front matter  <span class="invalid-link-brackets">]]</span></span> on each note, plus the <code class="language-plaintext highlighter-rouge">config.yaml</code> file gives us all of the power we need to set rules about what gets published, and therefore, built for the site. I needed to make <strong>two</strong> edits to the config file to ensure the best experience:</p>
+<h3 id="part-5---adapting-to-my-setup--selectively-publishing">Part 5 - Adapting to my setup &gt; selectively publishing</h3>
+
+<p>This part caused me some pain.</p>
+
+<h4 id="51--first-attempt---yaml-front-matter-alone">5.1 | First Attempt - YAML Front Matter alone</h4>
+<blockquote>
+  <p>[!warning]
+This part did not work out in the final solution, but feel free to read for context!</p>
+</blockquote>
+
+<p>Since I use my notes for everything in my life, there’s likely some content I don’t want to share; simple to-do lists, personally identifiable information (PII), etc. I realize that I could split my notes into two folders, one for public and one for private, but I like to keep them together for the benefit of linking everything and for the <a class="internal-link" href="/obsidian">Obsidian</a> graph feature.</p>
+
+<p>Turns out the <span title="There is no note that matches this link." class="invalid-link">  <span class="invalid-link-brackets">[[</span>  YAML front matter  <span class="invalid-link-brackets">]]</span></span> on each note, plus the <code class="language-plaintext highlighter-rouge">config.yaml</code> file gives us all of the power we need to set rules about what gets published, and therefore, built for the site. I needed to make <strong>two edits</strong> to the config file to ensure the best experience:</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">exclude</span><span class="pi">:</span> <span class="pi">[</span>
 <span class="s1">'</span><span class="s">_includes/notes_graph.json'</span><span class="pi">,</span>
@@ -250,7 +307,7 @@ if on an m1 mac use <code class="language-plaintext highlighter-rouge">-- --wit
 <span class="s1">'</span><span class="s">_notes/**/*.pdf'</span><span class="pi">,</span>
 <span class="s1">'</span><span class="s">_notes/*.png'</span><span class="pi">,</span>
 <span class="s1">'</span><span class="s">_notes/**/*.png'</span><span class="pi">,</span>
-<span class="s1">'</span><span class="s">_notes/.obsidian/*'</span>
+<span class="s1">'</span><span class="s">_notes/.obsidian/*'</span> <span class="c1"># This was a result of the symlink</span>
 <span class="pi">]</span>
 
 <span class="na">defaults</span><span class="pi">:</span>
@@ -265,26 +322,74 @@ if on an m1 mac use <code class="language-plaintext highlighter-rouge">-- --wit
   <li>I added a <code class="language-plaintext highlighter-rouge">published: false</code> to ensure that any notes that might be lacking front matter don’t get published.</li>
 </ul>
 
-<h3 id="part-5---trouble-in-paradise">Part 5 - Trouble in paradise</h3>
+<h4 id="52--second-attempt----building-locally-instead-of-in-netlify">5.2 | Second Attempt  - Building locally instead of in Netlify</h4>
 
-<p>I realized that I would still need to commit my private notes to the git log, even if they were marked as <code class="language-plaintext highlighter-rouge">published: false</code> , which means they would be available if someone wanted to go looking through previous commits.</p>
+<p>Just when I thought I had figured out my perfect system, I realized I still had a problem.</p>
 
-<p>So I need to</p>
+<p>The <code class="language-plaintext highlighter-rouge">published: false</code> front matter is helpful for ignoring notes at <strong><em>build time</em></strong>, but the current CI/CD workflow requires that you are committing even those private notes to the git history. This means the contents of the notes would be pushed to GitHub, and therefore made public.</p>
 
-<h2 id="next-up">Next up</h2>
-<ul>
-  <li>Change hosted URL to garden.mikedownes.dev</li>
-  <li>Branching?</li>
-  <li>Embedded images?</li>
-  <li>Commit on Save?</li>
-  <li>CSS update
-    <ul>
-      <li>Some markdown blocks might not be rendering correctly</li>
-    </ul>
-  </li>
-  <li>Graph improvements?</li>
-  <li>Search?</li>
-</ul>
+<p>Of course we could just make the repository <strong><em>private</em></strong>, but I don’t like that I’m being <strong><em>forced</em></strong> to do so. Additionally, the confidentiality of my private notes would come at the expense of cutting myself off from other developers who may be interested in this digital garden work.</p>
+
+<p>After giving it some more thought, I’ve come up with a solution for the moment, although I’m not certain it will remain this way for long. <strong>Instead of committing the <em>notes</em> and building with Netlify, we’ll build locally and post the built site.</strong> This will make sure that only publishable content</p>
+
+<h6 id="521-switch-up-the-commit">5.2.1 Switch up the commit</h6>
+
+<p><strong>First</strong>, I need to ensure that my <code class="language-plaintext highlighter-rouge">_notes</code> are never committed to the git history. This should be easy adding the following to the <code class="language-plaintext highlighter-rouge">.gitignore</code>:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Don't commit notes to the git history</span>
+_notes/
+</code></pre></div></div>
+
+<p>Instead we’ll make sure we’re committing the <code class="language-plaintext highlighter-rouge">_site</code> folder contents, so we’ll need to <strong>remove</strong> the statement which tells git to ignore it. The final <code class="language-plaintext highlighter-rouge">.gitignore</code> file looks like this:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Don't commit notes to the git history</span>
+_notes/
+
+<span class="c"># Sass cache</span>
+.sass-cache/
+
+<span class="c"># Jekyll cache &amp; metadata</span>
+.jekyll-cache/
+.jekyll-metadata
+
+<span class="c"># Notes graph metadata</span>
+_includes/notes_graph.json
+
+<span class="c"># Obsidian config</span>
+.obsidian/
+</code></pre></div></div>
+
+<h6 id="522-make-sure-netlify-knows">5.2.2 Make sure Netlify knows!</h6>
+<p>Remove the <code class="language-plaintext highlighter-rouge">command = "jekyll build --trace"</code> statement from the <code class="language-plaintext highlighter-rouge">netlify.toml</code> file and you get:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[build]
+  publish = "_site"
+</code></pre></div></div>
+
+<p>Ok! Nearly there…</p>
+
+<hr>
+
+<h3 id="part-6---the-new-build--deploy-process">Part 6 - The new build &amp; deploy process</h3>
+<p>With our new setup, once we’ve update our notes &amp; content, we’ll need to build, commit, and then push to GitHub for the changes to be deployed. In short,</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="c"># Add modified files to staging area</span>
+git commit <span class="nt">-m</span> <span class="s2">"Updated content"</span> <span class="c"># Explain</span>
+git push  <span class="c"># Send it up!</span>
+</code></pre></div></div>
+
+<p>Netlify will detect the commit and deploy the new site!</p>
+
+<p>🌳</p>
+
+<hr>
+
+<pre><code class="language-mermaid">flowchart BT
+
+/_notes -.symlink.-&gt; /path/to/preferred/notes/location 
+/_notes -.ignored during commit.-&gt; .gitignore
+/_notes --&gt; build
+build --&gt; /_site --&gt; commited --&gt; pushed --&gt; Netlify
+
+
+</code></pre>
 </body></html>
 
     </content>
@@ -295,7 +400,7 @@ if on an m1 mac use <code class="language-plaintext highlighter-rouge">-- --wit
       <div style="display: grid; grid-gap: 1em; grid-template-columns: repeat(1fr);">
       
         <div class="backlink-box">
-        <a class="internal-link" href="/the-garden-gate">The garden gate</a><br>
+        <a class="internal-link" href="/">The garden gate</a><br>
         <div style="font-size: 0.9em">Welcome 🌳
 </div>
         </div>
@@ -375,7 +480,7 @@ if on an m1 mac use <code class="language-plaintext highlighter-rouge">-- --wit
         const FONT_BASELINE = 40;
         const MAX_LABEL_LENGTH = 50;
 
-        const graphData = {"edges":[{"source":"68105103105116971083210397114100101110","target":"68105103105116971083210397114100101110"},{"source":"779712032118971051081089711099111117114116391153210610110712110810832116101109112108971161013211611711611111410597108","target":"68105103105116971083210397114100101110"},{"source":"681051031051169710832103971141001011103210010111832115101116117112","target":"68105103105116971083210397114100101110"},{"source":"8410410132103971141001011103210397116101","target":"68105103105116971083210397114100101110"},{"source":"681051031051169710832103971141001011103210010111832115101116117112","target":"779712032118971051081089711099111117114116391153210610110712110810832116101109112108971161013211611711611111410597108"},{"source":"68105103105116971083210397114100101110","target":"78111116105111110"},{"source":"781111161013211697107105110103329711499104101116121112101115","target":"78111116105111110"},{"source":"68105103105116971083210397114100101110","target":"799811510510010597110"},{"source":"779712032118971051081089711099111117114116391153210610110712110810832116101109112108971161013211611711611111410597108","target":"799811510510010597110"},{"source":"781111161013211697107105110103329711499104101116121112101115","target":"799811510510010597110"},{"source":"799811510510010597110","target":"799811510510010597110"},{"source":"8211197109321141011151019711499104","target":"799811510510010597110"},{"source":"8410410132103971141001011103210397116101","target":"681051031051169710832103971141001011103210010111832115101116117112"},{"source":"68105103105116971083210397114100101110","target":"8211197109321141011151019711499104"},{"source":"799811510510010597110","target":"8211197109321141011151019711499104"},{"source":"681051031051169710832103971141001011103210010111832115101116117112","target":"83121109108105110107115"}],"nodes":[{"id":"68105103105116971083210397114100101110","path":"/digital-garden","label":"Digital garden"},{"id":"719711611598121","path":"/gatsby","label":"Gatsby"},{"id":"779712032118971051081089711099111117114116391153210610110712110810832116101109112108971161013211611711611111410597108","path":"/max-vaillancourt-s-jekyll-template-tutorial","label":"Max vaillancourt's jekyll template tutorial"},{"id":"781111161013211697107105110103329711499104101116121112101115","path":"/note-taking-archetypes","label":"Note taking archetypes"},{"id":"78111116105111110","path":"/notion","label":"Notion"},{"id":"799811510510010597110","path":"/obsidian","label":"Obsidian"},{"id":"681051031051169710832103971141001011103210010111832115101116117112","path":"/digital-garden-dev-setup","label":"Digital garden dev setup"},{"id":"8211197109321141011151019711499104","path":"/roam-research","label":"Roam research"},{"id":"8410410132103971141001011103210397116101","path":"/the-garden-gate","label":"The garden gate"},{"id":"83121109108105110107115","path":"/symlinks","label":"Symlinks"}]}
+        const graphData = {"edges":[{"source":"68105103105116971083210397114100101110","target":"661171081081011163210611111711411097108"},{"source":"8410410132103971141001011103210397116101","target":"661171081081011163210611111711411097108"},{"source":"661171081081011163210611111711411097108","target":"67971141141111081084432114121100101114"},{"source":"68105103105116971083210397114100101110","target":"68105103105116971083210397114100101110"},{"source":"779712032118971051081089711099111117114116391153210610110712110810832116101109112108971161013211611711611111410597108","target":"68105103105116971083210397114100101110"},{"source":"8410410132103971141001011103210397116101","target":"68105103105116971083210397114100101110"},{"source":"799811510510010597110","target":"7797114107100111119110"},{"source":"8211197109321141011151019711499104","target":"7797114107100111119110"},{"source":"8410410132103971141001011103210397116101","target":"7797114107100111119110"},{"source":"681051031051169710832103971141001011103210010111832115101116117112","target":"779712032118971051081089711099111117114116391153210610110712110810832116101109112108971161013211611711611111410597108"},{"source":"68105103105116971083210397114100101110","target":"78111116105111110"},{"source":"68105103105116971083210397114100101110","target":"799811510510010597110"},{"source":"779712032118971051081089711099111117114116391153210610110712110810832116101109112108971161013211611711611111410597108","target":"799811510510010597110"},{"source":"799811510510010597110","target":"799811510510010597110"},{"source":"681051031051169710832103971141001011103210010111832115101116117112","target":"799811510510010597110"},{"source":"8211197109321141011151019711499104","target":"799811510510010597110"},{"source":"8410410132103971141001011103210397116101","target":"799811510510010597110"},{"source":"8410410132103971141001011103210397116101","target":"681051031051169710832103971141001011103210010111832115101116117112"},{"source":"68105103105116971083210397114100101110","target":"8211197109321141011151019711499104"},{"source":"799811510510010597110","target":"8211197109321141011151019711499104"},{"source":"68105103105116971083210397114100101110","target":"8310199111110100329811497105110"},{"source":"799811510510010597110","target":"8310199111110100329811497105110"},{"source":"8410410132103971141001011103210397116101","target":"8310199111110100329811497105110"},{"source":"68105103105116971083210397114100101110","target":"841041013297114116105115116391153211997121"},{"source":"8410410132103971141001011103210397116101","target":"841041013297114116105115116391153211997121"},{"source":"661171081081011163210611111711411097108","target":"8410410132103971141001011103210397116101"},{"source":"68105103105116971083210397114100101110","target":"8410410132103971141001011103210397116101"},{"source":"719711611598121","target":"8410410132103971141001011103210397116101"},{"source":"779712032118971051081089711099111117114116391153210610110712110810832116101109112108971161013211611711611111410597108","target":"8410410132103971141001011103210397116101"},{"source":"799811510510010597110","target":"8410410132103971141001011103210397116101"},{"source":"681051031051169710832103971141001011103210010111832115101116117112","target":"8410410132103971141001011103210397116101"},{"source":"8211197109321141011151019711499104","target":"8410410132103971141001011103210397116101"},{"source":"8310199111110100329811497105110","target":"8410410132103971141001011103210397116101"},{"source":"841041013297114116105115116391153211997121","target":"8410410132103971141001011103210397116101"},{"source":"8410410132103971141001011103210397116101","target":"8410410132103971141001011103210397116101"},{"source":"8710411132105115321091051071013210011111911010111563","target":"8410410132103971141001011103210397116101"},{"source":"83121109108105110107115","target":"8410410132103971141001011103210397116101"},{"source":"779712032118971051081089711099111117114116391153210610110712110810832116101109112108971161013211611711611111410597108","target":"86971051081089711099111117114116443210997120105109101"},{"source":"681051031051169710832103971141001011103210010111832115101116117112","target":"86971051081089711099111117114116443210997120105109101"},{"source":"681051031051169710832103971141001011103210010111832115101116117112","target":"8710411132105115321091051071013210011111911010111563"},{"source":"8410410132103971141001011103210397116101","target":"8710411132105115321091051071013210011111911010111563"},{"source":"681051031051169710832103971141001011103210010111832115101116117112","target":"83121109108105110107115"}],"nodes":[{"id":"661171081081011163210611111711411097108","path":"/bullet-journal","label":"Bullet journal"},{"id":"67971141141111081084432114121100101114","path":"/carroll-ryder","label":"Carroll, ryder"},{"id":"68105103105116971083210397114100101110","path":"/digital-garden","label":"Digital garden"},{"id":"719711611598121","path":"/gatsby","label":"Gatsby"},{"id":"7797114107100111119110","path":"/markdown","label":"Markdown"},{"id":"779712032118971051081089711099111117114116391153210610110712110810832116101109112108971161013211611711611111410597108","path":"/max-vaillancourt-s-jekyll-template-tutorial","label":"Max vaillancourt's jekyll template tutorial"},{"id":"78111116105111110","path":"/notion","label":"Notion"},{"id":"799811510510010597110","path":"/obsidian","label":"Obsidian"},{"id":"681051031051169710832103971141001011103210010111832115101116117112","path":"/digital-garden-dev-setup","label":"Digital garden dev setup"},{"id":"8211197109321141011151019711499104","path":"/roam-research","label":"Roam research"},{"id":"8310199111110100329811497105110","path":"/second-brain","label":"Second brain"},{"id":"841041013297114116105115116391153211997121","path":"/the-artist-s-way","label":"The artist's way"},{"id":"8410410132103971141001011103210397116101","path":"/","label":"The garden gate"},{"id":"86971051081089711099111117114116443210997120105109101","path":"/vaillancourt-maxime","label":"Vaillancourt, maxime"},{"id":"8710411132105115321091051071013210011111911010111563","path":"/who-is-mike-downes","label":"Who is mike downes?"},{"id":"83121109108105110107115","path":"/symlinks","label":"Symlinks"}]}
         let nodesData = graphData.nodes;
         let linksData = graphData.edges;
 
