@@ -1,33 +1,19 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/8cfa8785-8df8-4aad-ad35-8f1c790b8baf/deploy-status)](https://app.netlify.com/sites/digital-garden-jekyll-template/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8624838c-2439-4b60-9bef-739a98ba278a/deploy-status)](https://app.netlify.com/sites/mikedownes-garden/deploys)
 
-# Digital garden Jekyll template
 
-Use this template repository to get started with your own digital garden.
+# About
 
-**I wrote a tutorial explaining how to set it up: [Setting up your own digital garden with Jekyll](https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyll)**
+This is where I store the source files for my digital garden site. 
+Check it out: [mikedownes.dev](https://mikedownes.dev)
 
-Preview the template here: https://digital-garden-jekyll-template.netlify.app/
+The inspiration for this site setup comes from a couple of existing resources:
 
-- Based on Jekyll, a static website generator
-- Supports Roam-style double bracket link syntax to other notes
-- Creates backlinks to other notes automatically
-- Features link previews on hover
-- Includes graph visualization of the notes and their links
-- Features a simple and responsive design
-- Supports Markdown or HTML notes
+* Mike Tannebaum's Digital Garden Site, [The Refined Mind](https://refinedmind.co/)
+* Maxime Vaillancourt's [Jekyll Template](https://github.com/maximevaillancourt/digital-garden-jekyll-template) & [Tutorial](https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyll)
 
-<img width="1522" alt="Screen Shot 2020-05-19 at 23 05 46" src="https://user-images.githubusercontent.com/8457808/82400515-7d026d80-9a25-11ea-83f1-3b9cb8347e07.png">
+# Future Plans
 
-## A note about GitHub Pages
-
-GitHub Pages only partially supports this template: to power the interactive notes graph, this template uses a custom Jekyll plugin to generate the graph data in [`notes_graph.json`](https://github.com/maximevaillancourt/digital-garden-jekyll-template/blob/7ac331a4113bac77c993856562acc2bfbde9f2f7/_plugins/bidirectional_links_generator.rb#L102), and [GitHub Pages doesn't support custom Jekyll plugins](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#plugins).
-
-If you want to use the graph with GitHub Pages, you may try building your garden locally using Jekyll then pushing the result to GitHub Pages.
-
-Alternatively, you may deploy your garden to Netlify and it'll work out of the box. [I wrote a guide explaining how to set this up](https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyll).
-
-If you don't care about the graph, you can simply remove it from this layout, [as explained here](https://github.com/maximevaillancourt/digital-garden-jekyll-template/discussions/132#discussioncomment-3625772).
-
-## License
-
-Source code is available under the [MIT license](LICENSE.md).
+I hope to use Mike & Maxime's contributions as a starter for this site. I 
+already had to adapt Maxime's template to comply nicely with how I like to 
+store and publish my notes. If you want to read the development log for my
+experience building this site, you can do so [here](https://www.mikedownes.dev/digital-garden-dev-setup)
